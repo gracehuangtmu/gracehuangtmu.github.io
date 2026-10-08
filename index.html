@@ -18,7 +18,7 @@
 :root{
   --bg:#EEF3F2; --card:#FFFFFF; --ink:#16252A; --muted:#5B6C70; --line:#DCE5E3; --hover:#F3F7F6;
   --tmu:#00796B; --tmu-deep:#004D45; --tmu-soft:#E0F0ED; --gold:#B38A2E; --on-tmu:#FFFFFF;
-  --banner-a:#00564D; --banner-b:#0A8F80;
+  --banner-a:#00564D; --banner-b:#0A8F80; --feat-a:#003F38; --feat-b:#00796B;
   --f-sans:"Source Sans 3","Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --r:10px;
@@ -26,11 +26,11 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0C1416; --card:#152024; --ink:#E4ECEB; --muted:#98AAAD; --line:#26363A; --hover:#1B2A2E;
   --tmu:#4FC3B2; --tmu-deep:#8EDCD0; --tmu-soft:#173430; --gold:#D9B45E; --on-tmu:#08201C;
-  --banner-a:#06302B; --banner-b:#0D5E55; color-scheme:dark}}
+  --banner-a:#06302B; --banner-b:#0D5E55; --feat-a:#062B27; --feat-b:#0B5249; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0C1416; --card:#152024; --ink:#E4ECEB; --muted:#98AAAD; --line:#26363A; --hover:#1B2A2E;
   --tmu:#4FC3B2; --tmu-deep:#8EDCD0; --tmu-soft:#173430; --gold:#D9B45E; --on-tmu:#08201C;
-  --banner-a:#06302B; --banner-b:#0D5E55; color-scheme:dark}
+  --banner-a:#06302B; --banner-b:#0D5E55; --feat-a:#062B27; --feat-b:#0B5249; color-scheme:dark}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -107,26 +107,34 @@ p{margin:0}
 .more-btn:hover{color:var(--tmu)}
 
 /* pipeline (featured) */
-.pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:4px}
-.stage{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:10px 10px 12px;text-align:left;cursor:pointer;position:relative;overflow:hidden;color:var(--ink);min-width:0}
-.stage:hover{border-color:var(--tmu)}
-.stage .no{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
-.stage b{display:block;font-size:15px;margin-top:2px}
-.stage small{display:block;font-family:var(--f-mono);font-size:10.5px;color:var(--muted);line-height:1.4;margin-top:2px;overflow-wrap:anywhere}
-.stage .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--tmu)}
-.stage[aria-selected="true"]{background:var(--tmu-soft);border-color:var(--tmu)}
-.stage[aria-selected="true"] .bar{width:100%}
-.stage-detail{margin-top:12px;padding:16px 18px;border-radius:8px;border:1px dashed var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;align-items:start}
-.stage-detail h3{font-size:16px}
-.stage-detail .ex{grid-column:1/-1;font-size:13.5px;color:var(--muted)}
-.stage-detail .ex b{color:var(--ink)}
-.auto{font-size:12px;color:var(--muted);border:1px solid var(--line);background:none;border-radius:999px;padding:3px 10px;cursor:pointer}
-
-.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
-.fcard{border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+#featured{background:linear-gradient(135deg,var(--feat-a) 0%,var(--feat-b) 100%);border:0;color:#fff;position:relative;overflow:hidden}
+#featured::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#FFE29633 0%,#FFE29600 70%);pointer-events:none}
+#featured h2{color:#fff}
+#featured .sub{color:#FFFFFFB8}
+.fk{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FFE296;margin-bottom:4px}
+.flow{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:18px}
+.flow::before{content:"";position:absolute;left:8%;right:8%;top:30px;height:2px;background:repeating-linear-gradient(90deg,#FFFFFF66 0 6px,transparent 6px 12px)}
+.flow::after{content:"";position:absolute;top:26px;left:8%;width:10px;height:10px;border-radius:50%;background:#FFE296;box-shadow:0 0 12px #FFE296;animation:travel 6s linear infinite}
+@keyframes travel{from{left:8%}to{left:calc(92% - 10px)}}
+.stage{position:relative;z-index:1;border:0;background:none;color:#fff;text-align:center;cursor:pointer;padding:0 4px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;font:inherit}
+.stage .dot{width:60px;height:60px;border-radius:50%;background:var(--feat-a);border:2px solid #FFFFFF80;display:grid;place-items:center;transition:transform .25s,background .25s,border-color .25s}
+.stage .dot svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.stage b{font-size:15px}
+.stage .num{font-size:22px;font-weight:800;color:#FFE296;font-variant-numeric:tabular-nums;line-height:1}
+.stage small{font-size:11.5px;color:#FFFFFFB8;line-height:1.35}
+.stage:hover .dot{transform:translateY(-3px);border-color:#FFE296}
+.stage[aria-selected="true"] .dot{background:#FFE296;border-color:#FFE296;transform:scale(1.08)}
+.stage[aria-selected="true"] .dot svg{stroke:var(--feat-a)}
+.stage-detail{margin-top:14px;padding:16px 18px;border-radius:10px;background:#FFFFFF14;border:1px solid #FFFFFF26;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;align-items:start;color:#fff}
+.stage-detail h3{font-size:16px;color:#fff}
+.stage-detail .sub{color:#FFFFFFB8}
+.stage-detail .ex{grid-column:1/-1;font-size:13.5px;color:#FFFFFFCC}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+.fcard{border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;background:#FFFFFF;color:var(--ink)}
 .fcard .k{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .fcard h3{font-size:15.5px}
-.fcard p{font-size:13.5px;color:var(--muted)}
+.fcard p{font-size:13.5px;color:#4A5B5F}
+.fcard a{font-size:13px;font-weight:700;margin-top:2px}
 
 /* research themes */
 .themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -250,15 +258,16 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
   .stat{padding:12px 16px}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .pipe{grid-template-columns:minmax(0,1fr)}
-  .stage{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:8px}
-  .stage .no{grid-row:span 2;padding-top:3px}
+  .flow{grid-template-columns:repeat(5,minmax(0,1fr));gap:2px}
+  .stage .dot{width:44px;height:44px}.stage .dot svg{width:20px;height:20px}
+  .flow::before{top:22px}.flow::after{top:18px}
+  .stage b{font-size:12.5px}.stage .num{font-size:17px}.stage small{display:none}
   .themes,.feat{grid-template-columns:minmax(0,1fr)}
   .stage-detail{grid-template-columns:minmax(0,1fr)}
   .mrow{grid-template-columns:minmax(0,1fr) auto}
   .mrow .lab{grid-column:1/-1}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (prefers-reduced-motion:reduce){.flow::after{display:none}*{transition:none!important;animation:none!important}}
 </style>
 <style>body{margin:0}</style>
 </head>
@@ -274,7 +283,8 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
       <a href="#publications"><span class="zh">著作</span><span class="en">Publications</span></a>
       <a href="#grants"><span class="zh">計畫</span><span class="en">Grants</span></a>
       <a href="#lab"><span class="zh">Lab</span><span class="en">Lab</span></a>
-      <a href="#honors"><span class="zh">專利獲獎</span><span class="en">Honors</span></a>
+      <a href="#patents"><span class="zh">專利</span><span class="en">Patents</span></a>
+      <a href="#awards"><span class="zh">獲獎</span><span class="en">Awards</span></a>
       <a href="#experience"><span class="zh">經歷</span><span class="en">Experience</span></a>
       <a href="#teaching"><span class="zh">教學</span><span class="en">Teaching</span></a>
       <a href="#ventures"><span class="zh">新創</span><span class="en">Ventures</span></a>
@@ -337,19 +347,21 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
 
   <!-- FEATURED: pipeline -->
   <section class="card" id="featured">
-    <h2><span class="zh">精選：從資料到病床邊</span><span class="en">Featured: data to bedside</span>
-      <button class="auto" type="button" id="autoBtn" aria-pressed="false"><span class="zh">▶ 自動播放</span><span class="en">▶ Play</span></button></h2>
-    <p class="sub zh" style="margin-bottom:12px">點選每個階段，看我在醫療 AI 轉譯路徑上做的事。</p>
-    <p class="sub en" style="margin-bottom:12px">Tap a stage to see where my work sits along the translation path.</p>
-    <div class="pipe" role="tablist" aria-label="Translation pathway" id="pipe"></div>
+    <div class="fk">Featured</div>
+    <h2><span class="zh">從資料到病床邊</span><span class="en">From data to bedside</span></h2>
+    <p class="sub zh">我的工作沿著這條路徑展開。點選或滑過每一站，看看實際做了什麼；數字隨資料庫自動更新。</p>
+    <p class="sub en">My work runs along this path. Tap or hover a stage to see what it involves; the numbers update from my database.</p>
+    <div class="flow" role="tablist" aria-label="Translation pathway" id="pipe"></div>
     <div class="stage-detail" id="stageDetail" role="tabpanel" aria-live="polite"></div>
     <div class="feat">
       <div class="fcard"><span class="k zh">招募中</span><span class="k en">Now recruiting</span>
         <h3 class="zh">研究實習與研究生</h3><h3 class="en">Research interns &amp; students</h3>
-        <p class="zh">數位健康與醫療 AI 研究實習，歡迎國內外學生來信洽詢。</p><p class="en">Research internships in digital health and medical AI. Students from Taiwan and abroad are welcome to get in touch.</p></div>
+        <p class="zh">數位健康與醫療 AI 研究實習，歡迎國內外學生來信洽詢。</p><p class="en">Research internships in digital health and medical AI. Students from Taiwan and abroad are welcome to get in touch.</p>
+        <a href="#contact"><span class="zh">聯絡我 →</span><span class="en">Get in touch →</span></a></div>
       <div class="fcard"><span class="k zh">執行中</span><span class="k en">Active grant</span>
         <h3 class="zh">生成式 AI 慢性腎臟病衛教</h3><h3 class="en">Generative AI for CKD education</h3>
-        <p class="zh">國科會兩年期計畫，評估能力、臨床效能與成本效益。</p><p class="en">Two-year NSTC project on capability, clinical effectiveness, and cost-effectiveness.</p></div>
+        <p class="zh">國科會兩年期計畫，評估能力、臨床效能與成本效益。</p><p class="en">Two-year NSTC project on capability, clinical effectiveness, and cost-effectiveness.</p>
+        <a href="#grants"><span class="zh">看所有計畫 →</span><span class="en">See all grants →</span></a></div>
     </div>
   </section>
 
@@ -448,13 +460,17 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
     </div>
   </section>
 
-  <!-- PATENTS & AWARDS -->
-  <section class="card" id="honors">
-    <h2><span><span class="zh">專利與獲獎</span><span class="en">Patents &amp; awards</span></span></h2>
-    <h3 class="subh"><span class="zh">已獲准專利（中華民國）</span><span class="en">Granted patents (Taiwan)</span></h3>
+  <!-- PATENTS -->
+  <section class="card" id="patents">
+    <h2><span><span class="zh">專利</span><span class="en">Patents</span></span></h2>
+    <h3 class="subh" style="margin-top:0"><span class="zh">已獲准專利（中華民國）</span><span class="en">Granted patents (Taiwan)</span></h3>
     <div class="list" id="patList"></div>
-    <p class="sub" style="margin:8px 0 18px"><span class="zh">另有壓傷監測、心血管事件預測等案於美國、中國大陸提出申請，以及生成式 AI 醫療文件驗證等 5 案申請中。</span><span class="en">Further filings in the US and China cover pressure injury monitoring and cardiovascular event prediction; five more, including verification of AI-generated clinical documents, are pending.</span></p>
-    <h3 class="subh"><span class="zh">獲獎</span><span class="en">Awards</span></h3>
+    <p class="sub" style="margin-top:8px"><span class="zh">另有壓傷監測、心血管事件預測等案於美國、中國大陸提出申請，以及生成式 AI 醫療文件驗證等 5 案申請中。</span><span class="en">Further filings in the US and China cover pressure injury monitoring and cardiovascular event prediction; five more, including verification of AI-generated clinical documents, are pending.</span></p>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="card" id="awards">
+    <h2><span><span class="zh">獲獎</span><span class="en">Awards</span></span></h2>
     <div class="list" id="awdList"></div>
     <p class="sub" style="margin-top:10px"><span class="zh">指導學生獲獎：JCMIT 最佳口頭論文、全國科展佳作、NSPES 分場最佳簡報獎。</span><span class="en">Students supervised won a JCMIT Best Oral award, a National Science Fair prize, and an NSPES best presentation award.</span></p>
   </section>
@@ -570,15 +586,21 @@ var stages=[
  {zh:'驗證',en:'Validation',tag:'External · RCT',dzh:'外部驗證與隨機對照試驗，確認模型與介入在真實情境有效。',den:'External validation and randomized trials to test models and interventions in real settings.',xzh:'例：透析中運動 RCT；50 位臨床人員參與的 AI 文件審查使用者研究。',xen:'e.g. Intradialytic exercise RCT; a 50-clinician user study of AI documentation review.'},
  {zh:'轉譯',en:'Translation',tag:'IRB · Industry',dzh:'把研究成果接上產業：研究設計、IRB、使用者研究與產學合作。',den:'Connecting research to industry through study design, IRB, user research, and partnerships.',xzh:'例：醫療 AI 產品的臨床研究規劃與 IRB 送審；國科會產學合作計畫；北醫 SPARK 創業輔導。',xen:'e.g. Clinical study planning and IRB submissions for medical AI products; NSTC industry-academia projects; TMU SPARK startup advising.'},
  {zh:'臨床落地',en:'Bedside',tag:'Field deployment',dzh:'透過聯盟與新創，把工具帶進醫院與照護現場。',den:'Bringing tools into hospitals and care settings through the alliance and startups.',xzh:'例：DHT 數位健康新創轉譯產學聯盟的場域驗證；愛達特力 iDocly 於醫學中心的病歷錯誤偵測導入研究。',xen:'e.g. DHT field validation; iDocly discharge-summary error detection studies in hospitals.'}];
-var pipe=document.getElementById('pipe'),det=document.getElementById('stageDetail'),cur=0,timer=null;
+var stIco=['<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/>',
+ '<circle cx="6" cy="7" r="2"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 7.8l8 3.4M8 16.2l8-3.4"/>',
+ '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M8.5 12h7M12 5v4M12 15v4"/>',
+ '<path d="M3 20V9l9-5 9 5v11"/><path d="M9 20v-6h6v6M12 8v3M10.5 9.5h3"/>'];
+var pipe=document.getElementById('pipe'),det=document.getElementById('stageDetail'),cur=0;
+function stageNums(){try{
+ var n=[3,DATA.publications.filter(function(p){return shown(p)&&/\bai\b/.test(p.tags||'');}).length,DATA.grants.filter(function(g){return shown(g)&&g.role==='PI';}).length,DATA.patents.filter(shown).length,DATA.partners.filter(shown).length];
+ var l=[['家醫院電子病歷','hospitals of EHR'],['篇臨床 AI 論文','clinical AI papers'],['項主持計畫','grants as PI'],['項已獲准專利','granted patents'],['個臨床與產業夥伴','clinical & industry partners']];
+ pipe.querySelectorAll('.stage').forEach(function(b,i){b.querySelector('.num').textContent=n[i];b.querySelector('small').innerHTML=bi(l[i][0],l[i][1]);});}catch(e){}}
 stages.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.className='stage';b.setAttribute('role','tab');b.id='stage-'+i;
- b.innerHTML='<span class="no">0'+(i+1)+'</span><b>'+bi(s.zh,s.en)+'</b><small>'+s.tag+'</small><span class="bar"></span>';
- b.onclick=function(){stopAuto();pick(i);};pipe.appendChild(b);});
+ b.innerHTML='<span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true">'+stIco[i]+'</svg></span><b>'+bi(s.zh,s.en)+'</b><span class="num"></span><small></small>';
+ b.onclick=function(){pick(i);};b.onmouseenter=function(){if(matchMedia('(hover:hover)').matches)pick(i);};pipe.appendChild(b);});
 function pick(i){cur=i;pipe.querySelectorAll('.stage').forEach(function(b,j){b.setAttribute('aria-selected',String(j===i));});
- var s=stages[i];det.innerHTML='<h3>'+bi(s.zh,s.en)+'</h3><span class="sub">'+(i+1)+' / 5</span><p>'+bi(s.dzh,s.den)+'</p><p class="ex">'+bi(s.xzh,s.xen)+'</p>';}
-var ab=document.getElementById('autoBtn');
-function stopAuto(){clearInterval(timer);timer=null;ab.setAttribute('aria-pressed','false');ab.innerHTML=bi('▶ 自動播放','▶ Play');}
-ab.onclick=function(){if(timer){stopAuto();return;}ab.setAttribute('aria-pressed','true');ab.innerHTML=bi('❚❚ 暫停','❚❚ Pause');pick((cur+1)%5);timer=setInterval(function(){pick((cur+1)%5);},2600);};
+ var s=stages[i];det.innerHTML='<h3>'+bi(s.zh,s.en)+' <span class="sub" style="font-weight:500;font-size:13px">'+s.tag+'</span></h3><span class="sub">'+(i+1)+' / 5</span><p>'+bi(s.dzh,s.den)+'</p><p class="ex">'+bi(s.xzh,s.xen)+'</p>';}
 pick(0);
 
 /* research themes */
@@ -652,13 +674,13 @@ function rHonors(){$('patList').innerHTML=DATA.patents.filter(shown).map(functio
 function rTeach(){$('teachList').innerHTML=DATA.teaching.filter(shown).map(function(r){return '<div class="item"><div class="ico alt">'+esc(r.badge)+'</div><div><h3>'+bil(r.course_zh,r.course_en)+'</h3><div class="t3">'+bil(r.meta_zh,r.meta_en)+'</div>'+(r.desc_zh?'<p class="d">'+bil(r.desc_zh,r.desc_en)+'</p>':'')+'</div></div>';}).join('');}
 
 var RENDER={stats:rStats,grants:function(){rGrants();rStats();},publications:rPubs,people:rPeople,collaborators:rPeople,partners:rPeople,patents:rHonors,awards:rHonors,teaching:rTeach};
-function renderAll(){rStats();rGrants();rPubs();rPeople();rHonors();rTeach();}
+function renderAll(){rStats();rGrants();rPubs();rPeople();rHonors();rTeach();stageNums();}
 renderAll();
 /* live update from Google Sheets */
 Object.keys(SHEETS).forEach(function(k){
  fetch('https://docs.google.com/spreadsheets/d/'+SHEETS[k]+'/gviz/tq?tqx=out:csv&headers=1&t='+Date.now()).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){
   if(/^\s*</.test(t))throw 0;var rows=parseCSV(t);if(!rows.length)return;var need=Object.keys(DATA[k][0]||{})[0];if(need&&!(need in rows[0]))return;
-  DATA[k]=rows;try{RENDER[k]();}catch(e){}
+  DATA[k]=rows;try{RENDER[k]();stageNums();}catch(e){}
  }).catch(function(){});});
 
 /* tabs: grants + lab */
