@@ -2,435 +2,660 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="黃芝瑋 Chih-Wei (Grace) Huang｜臺北醫學大學 健康資訊科技國際研究中心 研究員。醫療 AI、慢性腎臟病數位健康介入、SaMD 法規與臨床轉譯。">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="黃芝瑋 Chih-Wei (Grace) Huang｜數位健康實踐者，臺北醫學大學 健康資訊科技國際研究中心 研究員。醫療 AI 臨床驗證、慢性腎臟病數位健康、產學轉譯。">
 <meta property="og:title" content="黃芝瑋 Chih-Wei (Grace) Huang">
-<meta property="og:description" content="Clinical AI, digital health for CKD, and SaMD regulatory strategy at Taipei Medical University.">
+<meta property="og:description" content="Digital health practitioner. Clinical AI validation, digital health for CKD, and industry-academia translation at Taipei Medical University.">
 <meta property="og:type" content="profile">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%230C6468'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='white' font-family='serif'%3E%E8%8A%9D%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300796B'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'%3E%E8%8A%9D%3C/text%3E%3C/svg%3E">
 <title>黃芝瑋 Grace Huang</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: sticky identity column on the left, long-form academic record on the right; stacks on phones. */
+/* Layout: LinkedIn-style profile. Sticky top bar, profile card with live banner, main column of section cards, slim right rail. TMU teal as brand color. */
 :root{
-  --bg:#F4F7F7; --surface:#FFFFFF; --ink:#13232A; --muted:#566A71; --line:#D5DFE1;
-  --accent:#0C6468; --accent-soft:#E2EEEE; --mark:#B5592F;
-  --f-display:"Noto Serif TC","Newsreader","Songti TC",Georgia,serif;
-  --f-latin:"Newsreader","Noto Serif TC",Georgia,serif;
-  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --bg:#EEF3F2; --card:#FFFFFF; --ink:#16252A; --muted:#5B6C70; --line:#DCE5E3; --hover:#F3F7F6;
+  --tmu:#00796B; --tmu-deep:#004D45; --tmu-soft:#E0F0ED; --gold:#B38A2E; --on-tmu:#FFFFFF;
+  --banner-a:#00564D; --banner-b:#0A8F80;
+  --f-sans:"Source Sans 3","Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r:10px;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0E1618; --surface:#142023; --ink:#E3ECEC; --muted:#93A6AA; --line:#25363B;
-  --accent:#62C2BE; --accent-soft:#18302F; --mark:#E59267; color-scheme:dark}}
+  --bg:#0C1416; --card:#152024; --ink:#E4ECEB; --muted:#98AAAD; --line:#26363A; --hover:#1B2A2E;
+  --tmu:#4FC3B2; --tmu-deep:#8EDCD0; --tmu-soft:#173430; --gold:#D9B45E; --on-tmu:#08201C;
+  --banner-a:#06302B; --banner-b:#0D5E55; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0E1618; --surface:#142023; --ink:#E3ECEC; --muted:#93A6AA; --line:#25363B;
-  --accent:#62C2BE; --accent-soft:#18302F; --mark:#E59267; color-scheme:dark}
+  --bg:#0C1416; --card:#152024; --ink:#E4ECEB; --muted:#98AAAD; --line:#26363A; --hover:#1B2A2E;
+  --tmu:#4FC3B2; --tmu-deep:#8EDCD0; --tmu-soft:#173430; --gold:#D9B45E; --on-tmu:#08201C;
+  --banner-a:#06302B; --banner-b:#0D5E55; color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-h1,h2,h3{text-wrap:balance;margin:0}
-
-/* language switching */
+body{background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:15.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 html:not([data-lang]) .en,html[data-lang="zh"] .en{display:none!important}
 html[data-lang="en"] .zh{display:none!important}
+a{color:var(--tmu)}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--tmu);outline-offset:2px;border-radius:6px}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
 
-.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:40px 64px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:56px}
+/* top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1128px;margin:0 auto;padding-inline:16px;display:flex;align-items:center;gap:16px;height:56px}
+.logo{width:34px;height:34px;border-radius:7px;background:var(--tmu);color:var(--on-tmu);display:grid;place-items:center;font-weight:900;font-size:15px;flex:none}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:600;padding:16px 10px 14px;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs a:hover{color:var(--ink)}
+.tabs a.on{color:var(--ink);border-bottom-color:var(--ink)}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px;flex:none}
+.lang button{border:0;background:none;color:var(--muted);font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--tmu);color:var(--on-tmu)}
 
-/* identity column */
-.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 32px);align-self:start;display:flex;flex-direction:column;gap:24px}
-.mono-mark{width:76px;height:76px;border-radius:50%;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--f-display);font-size:34px;font-weight:700}
-.name-zh{font-family:var(--f-display);font-size:34px;font-weight:700;letter-spacing:.06em;line-height:1.2}
-.name-en{font-family:var(--f-latin);font-size:19px;color:var(--muted);margin-top:4px}
-.role{font-size:14px;color:var(--muted);line-height:1.6;margin-top:10px}
-.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface);align-self:flex-start}
-.lang button{border:0;background:transparent;color:var(--muted);font:500 13px var(--f-body);padding:5px 14px;border-radius:999px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
-nav.toc{display:flex;flex-direction:column;gap:2px;border-left:1px solid var(--line)}
-nav.toc a{color:var(--muted);text-decoration:none;font-size:14px;padding:4px 0 4px 14px;margin-left:-1px;border-left:2px solid transparent}
-nav.toc a:hover{color:var(--ink);border-left-color:var(--accent)}
-.ids{display:flex;flex-direction:column;gap:6px;font-family:var(--f-mono);font-size:12.5px}
-.ids a{text-decoration:none}
-.ids span{color:var(--muted)}
+.page{max-width:1128px;margin:0 auto;padding-inline:16px;padding-block:24px 56px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.main,.rail{display:flex;flex-direction:column;gap:16px;min-width:0}
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;scroll-margin-top:72px}
+.card > h2{font-size:20px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sub{color:var(--muted);font-size:13.5px}
 
-/* main */
-main{display:flex;flex-direction:column;gap:72px;min-width:0}
-.hero{display:flex;flex-direction:column;gap:28px;padding-top:6px}
-.thesis{font-family:var(--f-display);font-weight:500;font-size:clamp(26px,3.6vw,38px);line-height:1.4;max-width:24em}
-html[data-lang="en"] .thesis{font-family:var(--f-latin);font-weight:400;font-size:clamp(28px,3.8vw,42px);line-height:1.25}
-.thesis em{font-style:normal;color:var(--accent)}
-.lede{max-width:40em;color:var(--muted);font-size:16.5px}
+/* profile card */
+.profile{padding:0;overflow:hidden}
+.banner{position:relative;height:200px;background:linear-gradient(120deg,var(--banner-a),var(--banner-b))}
+.banner canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.pbody{padding:0 24px 22px;position:relative}
+.avatar{position:relative;width:168px;height:168px;margin-top:-104px;border-radius:50%;border:4px solid var(--card);background:var(--card);cursor:pointer;padding:0}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.avatar svg{position:absolute;inset:-4px;width:calc(100% + 8px);height:calc(100% + 8px);pointer-events:none;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.avatar:hover svg{transform:rotate(-24deg)}
+.ring-text{font:700 11.2px var(--f-sans);letter-spacing:.14em;fill:#fff}
+.name{font-size:28px;font-weight:900;margin-top:14px;display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.name small{font-size:17px;font-weight:600;color:var(--muted)}
+.headline{font-size:16.5px;margin-top:4px;max-width:44em}
+.meta{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:13.5px;color:var(--muted)}
+.meta b{color:var(--tmu);font-weight:700}
+.orgs{display:flex;flex-direction:column;gap:6px;position:absolute;right:24px;top:14px;font-size:13.5px;font-weight:600}
+.org{display:flex;align-items:center;gap:8px}
+.chip-ico{width:28px;height:28px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:900;flex:none;background:var(--tmu-soft);color:var(--tmu)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative}
+.btn{border:1.5px solid var(--tmu);background:var(--card);color:var(--tmu);font-weight:700;font-size:14.5px;padding:6px 18px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--tmu-soft)}
+.btn.solid{background:var(--tmu);color:var(--on-tmu)}
+.btn.solid:hover{background:var(--tmu-deep);border-color:var(--tmu-deep)}
+.btn.ghost{border-color:var(--muted);color:var(--muted)}
+.menu{position:absolute;top:44px;left:0;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 28px #0000002a;padding:6px;min-width:240px;display:flex;flex-direction:column}
+.menu a{padding:8px 12px;border-radius:6px;text-decoration:none;color:var(--ink);font-size:14px;display:flex;justify-content:space-between;gap:12px}
+.menu a span{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.menu a:hover{background:var(--hover)}
 
-/* translation track: a real sequence */
-.track{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid var(--ink);margin-top:4px}
-.step{padding:12px 12px 0 0;position:relative;min-width:0}
-.step::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--ink)}
-.step:last-child::before{background:var(--accent);border-color:var(--accent)}
-.step b{display:block;font-size:14px;font-weight:700}
-.step small{display:block;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);letter-spacing:.02em;line-height:1.5;margin-top:2px}
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.stat{padding:14px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .n{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat .l{font-size:12.5px;color:var(--muted)}
 
-.stats{display:flex;flex-wrap:wrap;gap:12px 40px;font-variant-numeric:tabular-nums}
-.stat .n{font-family:var(--f-latin);font-size:34px;line-height:1;font-weight:500}
-.stat .l{font-size:13px;color:var(--muted);margin-top:6px}
-.src{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+/* about */
+.about-text{max-width:46em;white-space:normal}
+.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.more-btn{border:0;background:none;color:var(--muted);font-weight:700;cursor:pointer;padding:4px 0;margin-top:4px;font-size:14px}
+.more-btn:hover{color:var(--tmu)}
 
-section > h2{font-family:var(--f-display);font-size:24px;font-weight:700;letter-spacing:.04em;display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:24px}
-html[data-lang="en"] section > h2{font-family:var(--f-latin);font-weight:600;letter-spacing:0;font-size:27px}
-section > h2 .tag{font-family:var(--f-mono);font-size:11.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* pipeline (featured) */
+.pipe{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:4px}
+.stage{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:10px 10px 12px;text-align:left;cursor:pointer;position:relative;overflow:hidden;color:var(--ink);min-width:0}
+.stage:hover{border-color:var(--tmu)}
+.stage .no{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.stage b{display:block;font-size:15px;margin-top:2px}
+.stage small{display:block;font-family:var(--f-mono);font-size:10.5px;color:var(--muted);line-height:1.4;margin-top:2px;overflow-wrap:anywhere}
+.stage .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--tmu)}
+.stage[aria-selected="true"]{background:var(--tmu-soft);border-color:var(--tmu)}
+.stage[aria-selected="true"] .bar{width:100%}
+.stage-detail{margin-top:12px;padding:16px 18px;border-radius:8px;border:1px dashed var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;align-items:start}
+.stage-detail h3{font-size:16px}
+.stage-detail .ex{grid-column:1/-1;font-size:13.5px;color:var(--muted)}
+.stage-detail .ex b{color:var(--ink)}
+.auto{font-size:12px;color:var(--muted);border:1px solid var(--line);background:none;border-radius:999px;padding:3px 10px;cursor:pointer}
+
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.fcard{border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.fcard .k{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.fcard h3{font-size:15.5px}
+.fcard p{font-size:13.5px;color:var(--muted)}
 
 /* research themes */
-.themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 40px}
-.theme h3{font-size:17px;font-weight:700;margin-bottom:6px}
-.theme p{margin:0;color:var(--muted);font-size:15px}
-.theme .kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.kw span{font-family:var(--f-mono);font-size:11.5px;padding:2px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+.themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.theme{border:1px solid var(--line);border-radius:8px;padding:16px;background:var(--card);text-align:left;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;gap:6px;transition:border-color .2s,transform .2s}
+.theme:hover{border-color:var(--tmu);transform:translateY(-2px)}
+.theme .ic{width:38px;height:38px;border-radius:8px;background:var(--tmu-soft);display:grid;place-items:center}
+.theme .ic svg{width:22px;height:22px;stroke:var(--tmu);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme h3{font-size:16px}
+.theme p{font-size:13.5px;color:var(--muted)}
+.theme .x{font-size:13.5px;color:var(--ink);border-top:1px solid var(--line);padding-top:8px;margin-top:4px}
+.theme .tog{font-size:12.5px;font-weight:700;color:var(--tmu)}
+.theme[aria-expanded="true"]{border-color:var(--tmu);background:var(--hover)}
 
-/* publications */
-.pubs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:22px}
-.pubs li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px}
-.pubs .yr{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
-.pubs .t{font-family:var(--f-latin);font-size:18px;line-height:1.4;color:var(--ink)}
-.pubs .a{font-size:13.5px;color:var(--muted);margin-top:4px}
-.pubs .a strong{color:var(--ink);font-weight:600}
-.pubs .j{font-style:italic;font-family:var(--f-latin);font-size:15px}
-.more{margin-top:24px;font-size:14px;display:flex;flex-wrap:wrap;gap:8px 20px}
+/* filter chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{border:1px solid var(--muted);background:var(--card);color:var(--muted);border-radius:999px;padding:4px 14px;font-weight:600;font-size:13.5px;cursor:pointer}
+.chip:hover{border-color:var(--tmu);color:var(--tmu)}
+.chip[aria-pressed="true"]{background:var(--tmu);border-color:var(--tmu);color:var(--on-tmu)}
 
-/* grants */
-.grants{border-top:1px solid var(--line)}
-.grant{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
-.grant .when{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
-.grant .what{font-weight:500}
-.grant .who{font-size:13px;color:var(--muted);margin-top:2px}
-.live{display:inline-block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mark);border:1px solid currentColor;border-radius:3px;padding:0 5px;margin-left:8px;vertical-align:2px}
+/* list items (pubs, grants, experience) */
+.list{display:flex;flex-direction:column}
+.item{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.item:first-child{border-top:0;padding-top:4px}
+.ico{width:48px;height:48px;border-radius:8px;display:grid;place-items:center;font-weight:900;font-size:13px;background:var(--tmu-soft);color:var(--tmu)}
+.vico svg{width:24px;height:24px;stroke:var(--tmu);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ico.alt{background:var(--hover);color:var(--gold)}
+.item h3{font-size:15.5px;font-weight:700;line-height:1.4}
+.item .t2{font-size:14px}
+.item .t3{font-size:13px;color:var(--muted)}
+.item .t3 strong{color:var(--ink)}
+.item p.d{font-size:13.5px;color:var(--muted);margin-top:4px}
+.pub-t{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tags span{font-family:var(--f-mono);font-size:10.5px;padding:1px 7px;border-radius:4px;background:var(--tmu-soft);color:var(--tmu)}
+.live{font-family:var(--f-mono);font-size:10.5px;font-weight:500;color:var(--gold);border:1px solid currentColor;border-radius:3px;padding:0 5px;margin-left:6px;vertical-align:2px}
+.item.out{display:none}
+.footer-link{display:block;text-align:center;border-top:1px solid var(--line);margin:8px -24px -22px;padding:12px;font-weight:700;color:var(--muted);text-decoration:none;font-size:14px;background:none;border-left:0;border-right:0;border-bottom:0;width:calc(100% + 48px);cursor:pointer}
+.footer-link:hover{background:var(--hover);color:var(--ink)}
 
-/* teaching + ventures */
-.rows{display:flex;flex-direction:column;gap:28px}
-.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px}
-.row .k{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:4px}
-.row h3{font-size:17px;font-weight:700}
-.row p{margin:4px 0 0;color:var(--muted);font-size:15px;max-width:40em}
-.callout{background:var(--accent-soft);border-radius:8px;padding:18px 20px;margin-top:8px}
-.callout h3{color:var(--accent)}
-.callout p{color:var(--ink)}
+/* experience timeline */
+.exp-group .roles{position:relative;margin-left:0}
+.roles .role{position:relative;padding:4px 0 10px 22px}
+.roles .role::before{content:"";position:absolute;left:5px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--line);border:2px solid var(--card);box-shadow:0 0 0 1px var(--line)}
+.roles .role::after{content:"";position:absolute;left:9px;top:24px;bottom:-4px;width:2px;background:var(--line)}
+.roles .role:last-child::after{display:none}
+.roles .role.now::before{background:var(--tmu);box-shadow:0 0 0 1px var(--tmu)}
 
-/* timeline */
-.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 20px;font-size:14.5px}
-.tl dt,.tl .y{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
-.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px}
-.cols h3{font-size:13px;font-family:var(--f-mono);font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+/* skills */
+.skills{display:flex;flex-direction:column}
+.skill{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.skill:first-child{border-top:0}
+.skill b{font-size:15px}
+.skill .t3{font-size:12.5px;color:var(--muted)}
 
 /* contact */
-.contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px}
-.contact p{margin:0 0 12px;max-width:34em}
-.mail{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--f-mono);font-size:15px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
-.mail span{user-select:all;overflow-wrap:anywhere}
-.mail button{margin-left:auto;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 13px var(--f-body);padding:5px 12px;border-radius:6px;cursor:pointer}
-.mail button:hover{border-color:var(--accent);color:var(--accent)}
-.topics{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:15px}
-.topics li{padding-left:18px;position:relative}
-.topics li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:2px;background:var(--accent)}
-footer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+.intent{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.mailbox{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.mrow{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid var(--line)}
+.mrow:first-child{border-top:0}
+.mrow .lab{font-size:12px;color:var(--muted);font-weight:600}
+.mrow .val{font-family:var(--f-mono);font-size:13.5px;overflow-wrap:anywhere;user-select:all}
+.copy{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:6px;padding:3px 10px;font-size:12.5px;font-weight:600;cursor:pointer}
+.copy:hover{border-color:var(--tmu);color:var(--tmu)}
+.addr{font-size:13px;color:var(--muted);margin-top:12px}
 
-@media (max-width:880px){
-  .wrap{grid-template-columns:minmax(0,1fr);gap:40px;padding-block:24px 48px}
-  .side{position:static}
-  nav.toc{flex-direction:row;flex-wrap:wrap;border-left:0;gap:4px 14px}
-  nav.toc a{padding:2px 0;border-left:0;margin-left:0}
-  .contact,.cols{grid-template-columns:minmax(0,1fr)}
+/* rail */
+.rail .card{padding:18px 20px}
+.rail h2{font-size:16px!important;margin-bottom:10px!important}
+.links a{display:flex;justify-content:space-between;gap:8px;padding:7px 0;text-decoration:none;color:var(--ink);font-size:14px;border-top:1px solid var(--line)}
+.links a:first-child{border-top:0}
+.links a span{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+.links a:hover b{color:var(--tmu);text-decoration:underline}
+.open{background:var(--tmu-soft);border-color:transparent}
+.open h2{color:var(--tmu-deep)}
+.open ul{margin:0;padding-left:18px;font-size:14px}
+.langs div{display:flex;justify-content:space-between;font-size:14px;padding:3px 0}
+.langs span{color:var(--muted);font-size:13px}
+footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;padding-top:8px}
+
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translate(-50%,20px);background:var(--ink);color:var(--card);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;opacity:0;transition:.25s;pointer-events:none;z-index:50}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:980px){
+  .page{grid-template-columns:minmax(0,1fr)}
+  .rail{position:static}
+  .orgs{position:static;margin-top:12px}
 }
-@media (max-width:620px){
-  .themes{grid-template-columns:minmax(0,1fr)}
-  .track{grid-template-columns:minmax(0,1fr);border-top:0;border-left:2px solid var(--ink);gap:14px;margin-left:6px}
-  .step{padding:0 0 0 18px}
-  .step::before{top:6px;left:-7px}
-  .grant,.row{grid-template-columns:minmax(0,1fr);gap:4px}
-  .pubs li{grid-template-columns:minmax(0,1fr);gap:2px}
-  .tl{grid-template-columns:86px minmax(0,1fr)}
+@media (max-width:640px){
+  .banner{height:130px}
+  .avatar{width:128px;height:128px;margin-top:-72px}
+  .pbody{padding:0 16px 18px}
+  .card{padding:18px 16px}
+  .footer-link{margin:8px -16px -18px;width:calc(100% + 32px)}
+  .name{font-size:24px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{padding:12px 16px}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .pipe{grid-template-columns:minmax(0,1fr)}
+  .stage{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:8px}
+  .stage .no{grid-row:span 2;padding-top:3px}
+  .themes,.feat{grid-template-columns:minmax(0,1fr)}
+  .stage-detail{grid-template-columns:minmax(0,1fr)}
+  .mrow{grid-template-columns:minmax(0,1fr) auto}
+  .mrow .lab{grid-column:1/-1}
 }
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 <style>body{margin:0}</style>
 </head>
 <body>
 
-<div class="wrap">
-  <aside class="side">
-    <div class="mono-mark" aria-hidden="true">芝</div>
-    <div>
-      <div class="name-zh">黃芝瑋</div>
-      <div class="name-en">Chih-Wei (Grace) Huang, PhD</div>
-      <div class="role zh">臺北醫學大學 健康資訊科技國際研究中心 研究員<br>醫學資訊研究所 兼任助理教授</div>
-      <div class="role en">Research Fellow, International Center for Health Information Technology<br>Adjunct Assistant Professor, Graduate Institute of Biomedical Informatics<br>Taipei Medical University</div>
-    </div>
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" id="btn-zh" data-set="zh" aria-pressed="true">中文</button>
-      <button type="button" id="btn-en" data-set="en" aria-pressed="false">English</button>
-    </div>
-    <nav class="toc" aria-label="Sections">
-      <a href="#research"><span class="zh">研究主題</span><span class="en">Research</span></a>
-      <a href="#publications"><span class="zh">代表著作</span><span class="en">Publications</span></a>
-      <a href="#grants"><span class="zh">研究計畫</span><span class="en">Grants</span></a>
-      <a href="#teaching"><span class="zh">教學與人才培育</span><span class="en">Teaching</span></a>
-      <a href="#translation"><span class="zh">新創與聯盟</span><span class="en">Ventures &amp; Alliance</span></a>
-      <a href="#cv"><span class="zh">學經歷</span><span class="en">Background</span></a>
-      <a href="#contact"><span class="zh">合作聯絡</span><span class="en">Contact</span></a>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="logo" aria-hidden="true">芝</div>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#about"><span class="zh">關於</span><span class="en">About</span></a>
+      <a href="#research"><span class="zh">研究</span><span class="en">Research</span></a>
+      <a href="#publications"><span class="zh">著作</span><span class="en">Publications</span></a>
+      <a href="#grants"><span class="zh">計畫</span><span class="en">Grants</span></a>
+      <a href="#experience"><span class="zh">經歷</span><span class="en">Experience</span></a>
+      <a href="#teaching"><span class="zh">教學</span><span class="en">Teaching</span></a>
+      <a href="#ventures"><span class="zh">新創</span><span class="en">Ventures</span></a>
+      <a href="#contact"><span class="zh">聯絡</span><span class="en">Contact</span></a>
     </nav>
-    <div class="ids">
-      <a href="https://orcid.org/0000-0002-2551-6199"><span>ORCID</span> 0000-0002-2551-6199</a>
-      <a href="https://www.scopus.com/authid/detail.uri?authorId=56402033000"><span>Scopus</span> 56402033000</a>
-      <a href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/"><span>TMU Hub</span> Pure profile</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btn-zh" data-set="zh" aria-pressed="true">中</button>
+      <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
     </div>
-  </aside>
+  </div>
+</header>
 
-  <main>
-    <header class="hero">
-      <h1 class="thesis zh">讓臨床 AI 從<em>病歷資料</em>走到<em>病床邊</em>：用嚴謹的驗證、清楚的法規路徑與真實場域合作，把研究變成臨床可用的工具。</h1>
-      <h1 class="thesis en">Moving clinical AI from <em>health records</em> to the <em>bedside</em>, through rigorous validation, clear regulatory pathways, and real-world partnerships.</h1>
-      <p class="lede zh">我是醫學資訊研究者，研究聚焦於醫療人工智慧、慢性腎臟病的數位健康介入，以及醫療軟體（SaMD）的臨床驗證與法規策略。研究以臺北醫學大學臨床研究資料庫（TMUCRD）為基礎，涵蓋北醫附醫、萬芳、雙和三院的長期電子病歷資料。</p>
-      <p class="lede en">I am a medical informatics researcher working on clinical AI, digital health interventions for chronic kidney disease, and the validation and regulatory strategy of software as a medical device (SaMD). Much of my work draws on the TMU Clinical Research Database (TMUCRD), which links longitudinal EHR data across three affiliated hospitals: TMU Hospital, Wan Fang, and Shuang Ho.</p>
+<div class="page">
+<div class="main">
 
-      <div class="track" aria-label="Translation pathway">
-        <div class="step"><b class="zh">資料</b><b class="en">Data</b><small>TMUCRD · EHR</small></div>
-        <div class="step"><b class="zh">模型</b><b class="en">Model</b><small>ML · LLM</small></div>
-        <div class="step"><b class="zh">驗證</b><b class="en">Validation</b><small>External · RCT</small></div>
-        <div class="step"><b class="zh">法規</b><b class="en">Regulation</b><small>TFDA · FDA · CDS</small></div>
-        <div class="step"><b class="zh">臨床落地</b><b class="en">Bedside</b><small>Field deployment</small></div>
+  <!-- PROFILE -->
+  <section class="card profile" id="top">
+    <div class="banner">
+      <canvas id="net" aria-hidden="true"></canvas>
+    </div>
+    <div class="pbody">
+      <button class="avatar" id="avatar" type="button" aria-label="Open to collaborate">
+        <img src="data:image/jpeg;base64,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" alt="黃芝瑋 Chih-Wei (Grace) Huang" width="320" height="320">
+        <svg viewBox="0 0 176 176" aria-hidden="true">
+          <defs><path id="arc" d="M 18 88 A 70 70 0 0 0 158 88"/></defs>
+          <path d="M 12 88 A 76 76 0 0 0 164 88" fill="none" stroke="var(--tmu)" stroke-width="14"/>
+          <text class="ring-text"><textPath href="#arc" startOffset="50%" text-anchor="middle" id="ringtxt">#OPEN TO COLLABORATE</textPath></text>
+        </svg>
+      </button>
+      <div class="orgs">
+        <div class="org"><span class="chip-ico">TMU</span><span class="zh">臺北醫學大學</span><span class="en">Taipei Medical University</span></div>
+        <a class="org" href="https://dht.ichit.net/" style="color:inherit;text-decoration:none"><span class="chip-ico">DHT</span><span class="zh">DHT 數位健康新創轉譯產學聯盟</span><span class="en">DHT Digital Health Alliance</span></a>
+        <a class="org" href="https://doclyai.net/" style="color:inherit;text-decoration:none"><span class="chip-ico">iD</span><span class="zh">愛達特力 iDocly</span><span class="en">iDocly</span></a>
       </div>
-
-      <div>
-        <div class="stats">
-          <div class="stat"><div class="n">71</div><div class="l zh">研究成果</div><div class="l en">Research outputs</div></div>
-          <div class="stat"><div class="n">842</div><div class="l zh">引用次數</div><div class="l en">Citations</div></div>
-          <div class="stat"><div class="n">17</div><div class="l">h-index</div></div>
-          <div class="stat"><div class="n">12</div><div class="l zh">研究計畫</div><div class="l en">Funded projects</div></div>
-        </div>
-        <p class="src zh" style="margin-top:12px">資料來源：TMU Hub（Pure / Scopus），2026 年 10 月</p>
-        <p class="src en" style="margin-top:12px">Source: TMU Hub (Pure / Scopus), October 2026</p>
+      <h1 class="name">黃芝瑋 <small>Chih-Wei (Grace) Huang, PhD</small></h1>
+      <p class="headline zh">研究員｜助理教授 @ 臺北醫學大學 ICHIT ・ 數位健康實踐者 ・ 醫療 AI 臨床驗證、慢性腎臟病數位健康、產學轉譯 ・ DHT 數位健康新創轉譯產學聯盟執行長 ・ 愛達特力 iDocly 共同創辦人</p>
+      <p class="headline en">Research Fellow &amp; Adjunct Assistant Professor @ Taipei Medical University · Digital health practitioner · Clinical AI validation, digital health for CKD, industry-academia translation · Executive Director, DHT Alliance · Co-founder, iDocly</p>
+      <div class="meta">
+        <span class="zh">台灣 台北</span><span class="en">Taipei, Taiwan</span>
+        <a href="#contact"><span class="zh">聯絡資訊</span><span class="en">Contact info</span></a>
+        <span><b>842</b> <span class="zh">次引用</span><span class="en">citations</span></span>
       </div>
-    </header>
-
-    <section id="research">
-      <h2><span class="zh">研究主題</span><span class="en">Research</span><span class="tag">Research themes</span></h2>
-      <div class="themes">
-        <div class="theme">
-          <h3 class="zh">臨床 AI 驗證方法學</h3><h3 class="en">Clinical AI validation</h3>
-          <p class="zh">以多院區電子病歷建立與外部驗證預測模型，比較傳統機器學習與新一代表格基礎模型的表現，並研究大型語言模型在臨床文件中的錯誤偵測與安全性。</p>
-          <p class="en">Building and externally validating prediction models on multi-site EHR data, benchmarking classical machine learning against newer tabular foundation models, and studying error detection and safety of large language models in clinical documentation.</p>
-          <div class="kw"><span>Prediction models</span><span>External validation</span><span>LLM safety</span></div>
-        </div>
-        <div class="theme">
-          <h3 class="zh">慢性腎臟病數位健康介入</h3><h3 class="en">Digital health for CKD</h3>
-          <p class="zh">針對血液透析與慢性腎臟病族群，設計並以隨機對照試驗評估數位介入，包括透析中運動、穿戴式生理量測，以及生成式 AI 衛教的臨床效能與成本效益。</p>
-          <p class="en">Designing and testing digital interventions for hemodialysis and CKD populations in randomized trials, including intradialytic exercise, wearable physiological monitoring, and the clinical effectiveness and cost-effectiveness of generative-AI patient education.</p>
-          <div class="kw"><span>Hemodialysis</span><span>RCT</span><span>Wearables</span><span>GenAI education</span></div>
-        </div>
-        <div class="theme">
-          <h3 class="zh">SaMD 法規與臨床轉譯</h3><h3 class="en">SaMD regulation &amp; translation</h3>
-          <p class="zh">協助醫療 AI 產品規劃 TFDA / FDA 法規路徑、臨床決策支援（CDS）定位、可用性工程（IEC 62366）與 IRB 研究設計，讓產品在上市前累積可信的臨床證據。</p>
-          <p class="en">Planning TFDA and FDA pathways for medical AI products, clinical decision support (CDS) positioning, usability engineering under IEC 62366, and IRB study design, so products build credible clinical evidence before market entry.</p>
-          <div class="kw"><span>TFDA</span><span>FDA CDS</span><span>IEC 62366</span><span>IRB</span></div>
-        </div>
-        <div class="theme">
-          <h3 class="zh">醫療大數據分析與視覺化</h3><h3 class="en">Health big-data analytics</h3>
-          <p class="zh">運用世代研究、病例對照研究與統合分析，探討藥物暴露與癌症、心血管及神經退化疾病風險，並以視覺化方法呈現複雜的臨床資料。</p>
-          <p class="en">Cohort, case-control, and meta-analytic studies of drug exposure and the risk of cancer, cardiovascular, and neurodegenerative disease, with visual analytics for complex clinical data.</p>
-          <div class="kw"><span>Pharmacoepidemiology</span><span>Cohort study</span><span>Meta-analysis</span></div>
+      <div class="actions">
+        <a class="btn solid" href="#contact"><span class="zh">邀請合作</span><span class="en">Collaborate</span></a>
+        <a class="btn" href="#publications"><span class="zh">查看著作</span><span class="en">Publications</span></a>
+        <button class="btn ghost" type="button" id="moreBtn" aria-expanded="false" aria-controls="moreMenu"><span class="zh">更多</span><span class="en">More</span> ▾</button>
+        <div class="menu" id="moreMenu" hidden>
+          <a href="https://orcid.org/0000-0002-2551-6199">ORCID <span>0000-0002-2551-6199</span></a>
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=56402033000">Scopus <span>56402033000</span></a>
+          <a href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/">TMU Hub <span>Pure</span></a>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><div class="n" data-to="71">71</div><div class="l zh">研究成果</div><div class="l en">Research outputs</div></div>
+      <div class="stat"><div class="n" data-to="842">842</div><div class="l zh">引用次數</div><div class="l en">Citations</div></div>
+      <div class="stat"><div class="n" data-to="17">17</div><div class="l">h-index</div></div>
+      <div class="stat"><div class="n" data-to="12">12</div><div class="l zh">研究計畫</div><div class="l en">Funded projects</div></div>
+    </div>
+  </section>
 
-    <section id="publications">
-      <h2><span class="zh">近期著作</span><span class="en">Recent publications</span><span class="tag">Selected</span></h2>
-      <ol class="pubs">
-        <li><div class="yr">2026</div><div>
-          <div class="t">An evidence gap map of digital health interventions for enhancing patient engagement in healthcare</div>
-          <div class="a">Iqbal U, Manga YB, Nkhoma DE, … <strong>Huang C-W</strong>, … Celi LA, Li Y-CJ, Kohler F. <span class="j">npj Digital Medicine</span>.</div></div></li>
-        <li><div class="yr">2026</div><div>
-          <div class="t">Interpretable machine learning framework for predicting major adverse cardiovascular events in rheumatoid arthritis using electronic health records: multicenter cohort study</div>
-          <div class="a">Chiang WC, Lin GL, Chang YS, Liu YC, <strong>Huang CW</strong>, Nguyen PA, Hsu JC, Liou DM, Yang HC. <span class="j">JMIR Formative Research</span> 10:e91790.</div></div></li>
-        <li><div class="yr">2026</div><div>
-          <div class="t">Association between long-term use of H2 receptor antagonists and prostate cancer risk: a case-control study in Taiwan</div>
-          <div class="a">Wang SF, Liu YC, Nguyen PA, Lin GL, <strong>Huang CW</strong>, Rahmanti AR, Yang HC. <span class="j">Journal of Cancer</span> 17(2):419–426.</div></div></li>
-        <li><div class="yr">2026</div><div>
-          <div class="t">Effectiveness comparison of nirmatrelvir/ritonavir versus molnupiravir in COVID-19 patients with comorbidities in Taiwan: a multi-centre electronic health record study</div>
-          <div class="a">Lin WK, Lin SJ, Chang YH, … <strong>Huang CW</strong>, Yang HC, … Hsu JC. <span class="j">BMC Infectious Diseases</span> 26:70.</div></div></li>
-        <li><div class="yr">2026</div><div>
-          <div class="t">Association between gout and the risk of dementia: a meta-analysis of observational studies and biological mechanisms</div>
-          <div class="a">Wang YC, Huang APH, <strong>Huang CW</strong>, Islam MM, Kung WM. <span class="j">International Journal of Rheumatic Diseases</span> 29(3):e70582.</div></div></li>
-        <li><div class="yr">2025</div><div>
-          <div class="t">Health risk assessment for severe COVID-19 in Taiwan: a multi-centre electronic health record study</div>
-          <div class="a">… <strong>Huang C-W</strong>, … <span class="j">Journal of Global Health</span>.</div></div></li>
-      </ol>
-      <div class="more">
-        <a href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/publications/"><span class="zh">完整著作清單（TMU Hub）</span><span class="en">Full list on TMU Hub</span></a>
-        <a href="https://orcid.org/0000-0002-2551-6199">ORCID</a>
-        <a href="https://www.scopus.com/authid/detail.uri?authorId=56402033000">Scopus</a>
-      </div>
-    </section>
+  <!-- ABOUT -->
+  <section class="card" id="about">
+    <h2><span class="zh">關於</span><span class="en">About</span></h2>
+    <div class="about-text clamp" id="aboutText">
+      <p class="zh">我是一位數位健康實踐者（digital health practitioner）。我的工作橫跨研究、轉譯與實際落地：做研究產生證據，也走進醫院和新創團隊，讓數位健康工具真正被用起來。<br><br>研究上，我以臺北醫學大學臨床研究資料庫（TMUCRD）為基礎，這個資料庫涵蓋北醫附醫、萬芳、雙和三院的長期電子病歷。主要方向包括臨床 AI 驗證方法學、慢性腎臟病與血液透析族群的數位健康介入（含隨機對照試驗與生成式 AI 衛教），以及藥物流行病學與醫療大數據分析。<br><br>實踐上，我擔任 DHT 數位健康新創轉譯產學聯盟執行長，協助新創進行場域驗證與臨床資料驗證，也共同創辦了醫療 AI 新創愛達特力 iDocly。教學上，我在研究所開設 Biodesign 醫療創新課程，並指導研究生與國內外實習生。</p>
+      <p class="en">I am a digital health practitioner. My work spans research, translation, and real-world use: I produce evidence through research, and I work alongside hospitals and startups so that digital health tools are actually adopted in care.<br><br>On the research side, I build on the TMU Clinical Research Database (TMUCRD), which links longitudinal EHR data across three affiliated hospitals. My work covers clinical AI validation methodology, digital health interventions for chronic kidney disease and hemodialysis (including randomized trials and generative-AI patient education), and pharmacoepidemiology with health big data.<br><br>On the practice side, I serve as Executive Director of the DHT Digital Health Alliance, supporting startups with field validation and clinical data verification, and I co-founded the medical AI startup iDocly. I also teach a graduate Biodesign innovation course and mentor graduate students and interns from Taiwan and abroad.</p>
+    </div>
+    <button class="more-btn" type="button" id="aboutMore" aria-expanded="false" aria-controls="aboutText"><span class="zh">…看更多</span><span class="en">…see more</span></button>
+  </section>
 
-    <section id="grants">
-      <h2><span class="zh">主持研究計畫</span><span class="en">Grants as PI</span><span class="tag">NSTC</span></h2>
-      <div class="grants">
-        <div class="grant"><div class="when">2025.08 – 2027.07</div><div>
-          <div class="what zh">運用生成式人工智慧於慢性腎臟病衛教之能力、臨床效能與成本效益評估<span class="live">執行中</span></div>
-          <div class="what en">Capabilities, clinical effectiveness, and cost-effectiveness of generative AI for CKD patient education<span class="live">Active</span></div>
-          <div class="who zh">國家科學及技術委員會｜計畫主持人（兩年期）</div><div class="who en">National Science and Technology Council · PI (two-year)</div></div></div>
-        <div class="grant"><div class="when">2025.06 – 2026.05</div><div>
-          <div class="what zh">以活動為基礎之壓傷預測智慧鏡頭與臨床驗證應用計畫</div>
-          <div class="what en">Activity-based smart camera for pressure injury prediction and clinical validation</div>
-          <div class="who zh">國科會產學合作計畫｜計畫主持人</div><div class="who en">NSTC Industry-Academia Collaboration · PI</div></div></div>
-        <div class="grant"><div class="when">2024.08 – 2025.07</div><div>
-          <div class="what zh">性別差異對數位健康介入效果的影響：慢性腎臟病患者的預後評估</div>
-          <div class="what en">Prognostic impact of gender differences on the effectiveness of digital health interventions in CKD</div>
-          <div class="who zh">國家科學及技術委員會｜計畫主持人</div><div class="who en">NSTC · PI</div></div></div>
-        <div class="grant"><div class="when">– 2025.07</div><div>
-          <div class="what zh">利用臨床表型與穿戴式生理量測資料建立多模態透析病人個人化骨鬆骨折風險預測模型</div>
-          <div class="what en">Multimodal personalized fracture-risk prediction for dialysis patients from clinical phenotypes and wearable data</div>
-          <div class="who zh">國家科學及技術委員會｜計畫主持人（多年期）</div><div class="who en">NSTC · PI (multi-year)</div></div></div>
-      </div>
-    </section>
+  <!-- FEATURED: pipeline -->
+  <section class="card" id="featured">
+    <h2><span class="zh">精選：從資料到病床邊</span><span class="en">Featured: data to bedside</span>
+      <button class="auto" type="button" id="autoBtn" aria-pressed="false"><span class="zh">▶ 自動播放</span><span class="en">▶ Play</span></button></h2>
+    <p class="sub zh" style="margin-bottom:12px">點選每個階段，看我在醫療 AI 轉譯路徑上做的事。</p>
+    <p class="sub en" style="margin-bottom:12px">Tap a stage to see where my work sits along the translation path.</p>
+    <div class="pipe" role="tablist" aria-label="Translation pathway" id="pipe"></div>
+    <div class="stage-detail" id="stageDetail" role="tabpanel" aria-live="polite"></div>
+    <div class="feat">
+      <div class="fcard"><span class="k zh">招募中</span><span class="k en">Now recruiting</span>
+        <h3 class="zh">研究實習與研究生</h3><h3 class="en">Research interns &amp; students</h3>
+        <p class="zh">數位健康與醫療 AI 研究實習，歡迎國內外學生來信洽詢。</p><p class="en">Research internships in digital health and medical AI. Students from Taiwan and abroad are welcome to get in touch.</p></div>
+      <div class="fcard"><span class="k zh">執行中</span><span class="k en">Active grant</span>
+        <h3 class="zh">生成式 AI 慢性腎臟病衛教</h3><h3 class="en">Generative AI for CKD education</h3>
+        <p class="zh">國科會兩年期計畫，評估能力、臨床效能與成本效益。</p><p class="en">Two-year NSTC project on capability, clinical effectiveness, and cost-effectiveness.</p></div>
+    </div>
+  </section>
 
-    <section id="teaching">
-      <h2><span class="zh">教學與人才培育</span><span class="en">Teaching &amp; mentoring</span><span class="tag">Teaching</span></h2>
-      <div class="rows">
-        <div class="row"><div class="k"><span class="zh">研究所</span><span class="en">Graduate</span></div><div>
-          <h3 class="zh">Biodesign 醫療創新方法學</h3><h3 class="en">Medical innovation with Stanford Biodesign</h3>
-          <p class="zh">以 Stanford Biodesign 方法學為核心的全英語（EMI）研究所課程，於雙和校區協同授課，帶學生從臨床需求出發走完發想、篩選與驗證。</p>
-          <p class="en">An English-medium graduate course built on the Stanford Biodesign process, co-taught at the Shuang Ho campus. Students move from clinical needs to concept, screening, and validation.</p></div></div>
-        <div class="row"><div class="k"><span class="zh">大學部</span><span class="en">Undergraduate</span></div><div>
-          <h3 class="zh">健康照護資訊應用</h3><h3 class="en">Healthcare Informatics Application</h3>
-          <p class="zh">高齡健康暨長期照護學系課程，涵蓋資訊系統基礎、健康物聯網與銀髮科技、AI 與臨床決策支援，以及創新實作專題。</p>
-          <p class="en">A course for the School of Gerontology and Long-Term Care covering information systems, health IoT and age-tech, AI and clinical decision support, and a hands-on innovation project.</p></div></div>
-        <div class="row"><div class="k"><span class="zh">高中生</span><span class="en">High school</span></div><div>
-          <h3 class="zh">智慧醫療 AI 實戰寒假營</h3><h3 class="en">Smart Healthcare AI Winter Camp</h3>
-          <p class="zh">參與設計並授課，帶高中生練習思考方法、生成式 AI 運用與簡報表達，結合臨床情境實作。</p>
-          <p class="en">Co-designed and teach in this camp, coaching students in structured thinking, generative AI use, and presentation through clinical scenarios.</p></div></div>
-        <div class="row"><div class="k"><span class="zh">國際實習</span><span class="en">International</span></div><div class="callout">
-          <h3 class="zh">TEEP 國際實習：智癒未來</h3><h3 class="en">TEEP internship: AI and digital health for chronic disease</h3>
-          <p class="zh">教育部 TEEP 計畫「智癒未來：慢性病數位健康與 AI 創新人才計畫」（2027）。歡迎對慢性病數位健康、醫療 AI 與臨床資料研究有興趣的國際學生來信洽詢。</p>
-          <p class="en">Through Taiwan's Ministry of Education TEEP program, my lab hosts international interns in chronic-disease digital health and medical AI (2027 cohort). Students interested in clinical data research are welcome to get in touch.</p></div></div>
-      </div>
-    </section>
+  <!-- RESEARCH -->
+  <section class="card" id="research">
+    <h2><span class="zh">研究主題</span><span class="en">Research themes</span></h2>
+    <div class="themes" id="themes"></div>
+  </section>
 
-    <section id="translation">
-      <h2><span class="zh">新創與產學聯盟</span><span class="en">Ventures &amp; alliance</span><span class="tag">Translation</span></h2>
-      <div class="rows">
-        <div class="row"><div class="k"><span class="zh">執行長</span><span class="en">Exec. Director</span></div><div>
-          <h3 class="zh">DHT 數位健康新創轉譯產學聯盟</h3><h3 class="en">DHT Digital Health Alliance</h3>
-          <p class="zh">國科會補助、由臺北醫學大學主辦的產學聯盟。協助數位健康新創進行場域驗證、臨床資料驗證與法規準備，並串連人才培育與產學合作資源。</p>
-          <p class="en">An NSTC-funded industry-academia alliance hosted at Taipei Medical University. DHT supports digital health startups with field validation, clinical data verification, and regulatory preparation, and connects them to talent and partnership programs.</p></div></div>
-        <div class="row"><div class="k"><span class="zh">共同創辦人</span><span class="en">Co-founder</span></div><div>
-          <h3 class="zh">愛達特力股份有限公司 iDocly</h3><h3 class="en">iDocly Inc.</h3>
-          <p class="zh">北醫衍生的醫療 AI 新創，專注於臨床文件的語意一致性比對與錯誤標示，協助醫療人員安全使用 AI 生成的病歷內容。技術已提出台灣、美國與歐洲專利申請。</p>
-          <p class="en">A TMU spin-off that checks clinical documents for semantic consistency and flags errors, helping clinicians use AI-generated records safely. Patent applications filed in Taiwan, the US, and Europe.</p></div></div>
-        <div class="row"><div class="k"><span class="zh">產學合作</span><span class="en">Partner</span></div><div>
-          <h3 class="zh">婦嬣健康科技 FLOURISHE</h3><h3 class="en">FLOURISHE</h3>
-          <p class="zh">以乳癌預後預測研究為基礎的存活照護平台，提供醫師與病人兩種介面，並延伸至個案管理與病人端應用。</p>
-          <p class="en">A breast cancer prognosis and survivorship platform built on our prognosis prediction research, with separate clinician and patient views and an extension into case management.</p></div></div>
-        <div class="row"><div class="k"><span class="zh">創業顧問</span><span class="en">Advisor</span></div><div>
-          <h3>TMU SPARK</h3>
-          <p class="zh">自 2020 年起擔任臺北醫學大學 SPARK 計畫創業顧問，協助校內醫材與數位健康團隊推進轉譯。</p>
-          <p class="en">Startup advisor to the TMU SPARK program since 2020, helping campus medical device and digital health teams move toward translation.</p></div></div>
-      </div>
-    </section>
+  <!-- PUBLICATIONS -->
+  <section class="card" id="publications">
+    <h2><span class="zh">近期著作</span><span class="en">Recent publications</span></h2>
+    <div class="chips" role="group" aria-label="Filter" id="pubChips"></div>
+    <div class="list" id="pubList"></div>
+    <a class="footer-link" href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/publications/"><span class="zh">在 TMU Hub 查看全部 71 項研究成果 →</span><span class="en">See all 71 research outputs on TMU Hub →</span></a>
+  </section>
 
-    <section id="cv">
-      <h2><span class="zh">學經歷</span><span class="en">Background</span><span class="tag">CV</span></h2>
-      <div class="cols">
-        <div>
-          <h3 class="zh">經歷</h3><h3 class="en">Appointments</h3>
-          <dl class="tl">
-            <dt>2025 –</dt><dd class="zh" style="margin:0">北醫 健康資訊科技國際研究中心 研究員</dd><dd class="en" style="margin:0">Research Fellow, ICHIT, TMU</dd>
-            <dt>2023 –</dt><dd class="zh" style="margin:0">北醫 醫學資訊研究所 兼任助理教授</dd><dd class="en" style="margin:0">Adjunct Assistant Professor, Biomedical Informatics, TMU</dd>
-            <dt>2022 –</dt><dd class="zh" style="margin:0">北醫 醫學模擬教育中心 兼任研究員</dd><dd class="en" style="margin:0">Adjunct Research Fellow, Center for Education in Medical Simulation, TMU</dd>
-            <dt>2020 –</dt><dd class="zh" style="margin:0">北醫 TMU SPARK 創業顧問</dd><dd class="en" style="margin:0">Startup Advisor, TMU SPARK</dd>
-            <dt>2022 – 2025</dt><dd class="zh" style="margin:0">北醫 健康資訊科技國際研究中心 副研究員</dd><dd class="en" style="margin:0">Associate Research Fellow, ICHIT, TMU</dd>
-            <dt>2018 – 2022</dt><dd class="zh" style="margin:0">北醫 健康資訊科技國際研究中心 助理研究員</dd><dd class="en" style="margin:0">Assistant Research Fellow, ICHIT, TMU</dd>
-            <dt>2017 – 2018</dt><dd class="zh" style="margin:0">財團法人醫院評鑑暨醫療品質策進會 副研究員</dd><dd class="en" style="margin:0">Associate Researcher, Joint Commission of Taiwan</dd>
-            <dt>2016 – 2017</dt><dd class="zh" style="margin:0">北醫 醫學資訊研究所 博士後研究員</dd><dd class="en" style="margin:0">Postdoctoral Fellow, Biomedical Informatics, TMU</dd>
-          </dl>
-        </div>
-        <div>
-          <h3 class="zh">學歷</h3><h3 class="en">Education</h3>
-          <dl class="tl">
-            <dt>2016</dt><dd class="zh" style="margin:0">臺北醫學大學 醫學資訊研究所 博士</dd><dd class="en" style="margin:0">PhD, Biomedical Informatics, Taipei Medical University</dd>
-            <dt>2012</dt><dd class="zh" style="margin:0">臺北醫學大學 醫學資訊研究所 碩士</dd><dd class="en" style="margin:0">MSc, Biomedical Informatics, Taipei Medical University</dd>
-            <dt>2010</dt><dd class="zh" style="margin:0">臺北醫學大學 醫務管理學系 學士</dd><dd class="en" style="margin:0">BBA, Healthcare Administration, Taipei Medical University</dd>
-          </dl>
-          <h3 class="zh" style="margin-top:28px">榮譽</h3><h3 class="en" style="margin-top:28px">Honors</h3>
-          <dl class="tl">
-            <dt>2020</dt><dd class="zh" style="margin:0">北醫師生聯合學術研究發表 佳作（指導大專生研究計畫）</dd><dd class="en" style="margin:0">Honorable Mention, TMU Student-Faculty Joint Research Presentation (as supervisor)</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
+  <!-- GRANTS -->
+  <section class="card" id="grants">
+    <h2><span class="zh">主持研究計畫</span><span class="en">Grants as principal investigator</span></h2>
+    <div class="list">
+      <div class="item"><div class="ico">NSTC</div><div>
+        <h3 class="zh">運用生成式人工智慧於慢性腎臟病衛教之能力、臨床效能與成本效益評估<span class="live">執行中</span></h3>
+        <h3 class="en">Capabilities, clinical effectiveness, and cost-effectiveness of generative AI for CKD patient education<span class="live">ACTIVE</span></h3>
+        <div class="t2 zh">國家科學及技術委員會 ・ 計畫主持人</div><div class="t2 en">National Science and Technology Council · PI</div>
+        <div class="t3">2025.08 – 2027.07</div></div></div>
+      <div class="item"><div class="ico">NSTC</div><div>
+        <h3 class="zh">以活動為基礎之壓傷預測智慧鏡頭與臨床驗證應用計畫</h3>
+        <h3 class="en">Activity-based smart camera for pressure injury prediction and clinical validation</h3>
+        <div class="t2 zh">國科會產學合作計畫 ・ 計畫主持人</div><div class="t2 en">NSTC Industry-Academia Collaboration · PI</div>
+        <div class="t3">2025.06 – 2026.05</div></div></div>
+      <div class="item"><div class="ico">NSTC</div><div>
+        <h3 class="zh">性別差異對數位健康介入效果的影響：慢性腎臟病患者的預後評估</h3>
+        <h3 class="en">Gender differences in the effectiveness of digital health interventions for CKD</h3>
+        <div class="t2 zh">國家科學及技術委員會 ・ 計畫主持人</div><div class="t2 en">NSTC · PI</div>
+        <div class="t3">2024.08 – 2025.07</div></div></div>
+      <div class="item"><div class="ico">NSTC</div><div>
+        <h3 class="zh">利用臨床表型與穿戴式生理量測資料建立多模態透析病人個人化骨鬆骨折風險預測模型</h3>
+        <h3 class="en">Multimodal personalized fracture-risk prediction for dialysis patients using clinical and wearable data</h3>
+        <div class="t2 zh">國家科學及技術委員會 ・ 計畫主持人（多年期）</div><div class="t2 en">NSTC · PI (multi-year)</div>
+        <div class="t3">– 2025.07</div></div></div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2><span class="zh">演講邀約與合作</span><span class="en">Talks &amp; collaboration</span><span class="tag">Contact</span></h2>
-      <div class="contact">
-        <div>
-          <p class="zh">歡迎來信洽談研究合作、演講邀約、醫療 AI 場域驗證，以及研究生與國際實習生指導。</p>
-          <p class="en">I welcome inquiries about research collaboration, speaking invitations, clinical validation of medical AI, and supervision of graduate students and international interns.</p>
-          <div class="mail"><span id="email">gracehuang@tmu.edu.tw</span><button type="button" id="copy"><span class="zh">複製</span><span class="en">Copy</span></button></div>
-          <p class="zh" style="margin-top:16px;font-size:14px;color:var(--muted)">臺北醫學大學 醫學科技學院 健康資訊科技國際研究中心（ICHIT），台北</p>
-          <p class="en" style="margin-top:16px;font-size:14px;color:var(--muted)">International Center for Health Information Technology, College of Medical Science and Technology, Taipei Medical University, Taipei, Taiwan</p>
-        </div>
-        <div>
-          <ul class="topics zh">
-            <li>醫療 AI 的臨床驗證與研究設計</li>
-            <li>SaMD 法規策略與 TFDA / FDA 路徑</li>
-            <li>慢性腎臟病與透析數位健康</li>
-            <li>生成式 AI 於醫療與衛教的應用</li>
-            <li>醫療創新教育與 Biodesign</li>
-          </ul>
-          <ul class="topics en">
-            <li>Clinical validation and study design for medical AI</li>
-            <li>SaMD regulatory strategy and TFDA / FDA pathways</li>
-            <li>Digital health for CKD and dialysis</li>
-            <li>Generative AI in clinical care and patient education</li>
-            <li>Medical innovation education and Biodesign</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- EXPERIENCE -->
+  <section class="card" id="experience">
+    <h2><span class="zh">經歷</span><span class="en">Experience</span></h2>
+    <div class="list">
+      <div class="item exp-group"><div class="ico">TMU</div><div>
+        <h3 class="zh">臺北醫學大學</h3><h3 class="en">Taipei Medical University</h3>
+        <div class="t3 zh">2016 至今 ・ 10 年</div><div class="t3 en">2016 – present · 10 yrs</div>
+        <div class="roles" style="margin-top:8px">
+          <div class="role now"><div class="t2"><b class="zh">研究員</b><b class="en">Research Fellow</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2025 至今</div><div class="t3 en">Intl. Center for Health Information Technology · 2025 – present</div></div>
+          <div class="role now"><div class="t2"><b class="zh">兼任助理教授</b><b class="en">Adjunct Assistant Professor</b></div><div class="t3 zh">醫學資訊研究所 ・ 2023 至今</div><div class="t3 en">Graduate Institute of Biomedical Informatics · 2023 – present</div></div>
+          <div class="role now"><div class="t2"><b class="zh">兼任研究員</b><b class="en">Adjunct Research Fellow</b></div><div class="t3 zh">醫學模擬教育中心 ・ 2022 至今</div><div class="t3 en">Center for Education in Medical Simulation · 2022 – present</div></div>
+          <div class="role now"><div class="t2"><b class="zh">創業顧問</b><b class="en">Startup Advisor</b></div><div class="t3 zh">TMU SPARK ・ 2020 至今</div><div class="t3 en">TMU SPARK · 2020 – present</div></div>
+          <div class="role"><div class="t2"><b class="zh">副研究員</b><b class="en">Associate Research Fellow</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2022 – 2025</div><div class="t3 en">ICHIT · 2022 – 2025</div></div>
+          <div class="role"><div class="t2"><b class="zh">助理研究員</b><b class="en">Assistant Research Fellow</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2018 – 2022</div><div class="t3 en">ICHIT · 2018 – 2022</div></div>
+          <div class="role"><div class="t2"><b class="zh">博士後研究員</b><b class="en">Postdoctoral Fellow</b></div><div class="t3 zh">醫學資訊研究所 ・ 2016 – 2017</div><div class="t3 en">Biomedical Informatics · 2016 – 2017</div></div>
+        </div></div></div>
+      <div class="item"><div class="ico alt">JCT</div><div>
+        <h3 class="zh">副研究員</h3><h3 class="en">Associate Researcher</h3>
+        <div class="t2 zh">財團法人醫院評鑑暨醫療品質策進會</div><div class="t2 en">Joint Commission of Taiwan</div>
+        <div class="t3">2017 – 2018</div></div></div>
+    </div>
+  </section>
 
-    <footer>
-      <span class="zh">© 2026 黃芝瑋　最後更新：2026 年 10 月</span>
-      <span class="en">© 2026 Chih-Wei (Grace) Huang · Last updated October 2026</span>
-    </footer>
-  </main>
+  <!-- EDUCATION -->
+  <section class="card" id="education">
+    <h2><span class="zh">學歷</span><span class="en">Education</span></h2>
+    <div class="list">
+      <div class="item"><div class="ico">TMU</div><div><h3 class="zh">臺北醫學大學</h3><h3 class="en">Taipei Medical University</h3><div class="t2 zh">醫學資訊研究所 博士</div><div class="t2 en">PhD, Biomedical Informatics</div><div class="t3">2013 – 2016</div></div></div>
+      <div class="item"><div class="ico">TMU</div><div><h3 class="zh">臺北醫學大學</h3><h3 class="en">Taipei Medical University</h3><div class="t2 zh">醫學資訊研究所 碩士</div><div class="t2 en">MSc, Biomedical Informatics</div><div class="t3">2010 – 2012</div></div></div>
+      <div class="item"><div class="ico">TMU</div><div><h3 class="zh">臺北醫學大學</h3><h3 class="en">Taipei Medical University</h3><div class="t2 zh">醫務管理學系 學士</div><div class="t2 en">BBA, Healthcare Administration</div><div class="t3">2006 – 2010</div></div></div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section class="card" id="teaching">
+    <h2><span class="zh">教學與人才培育</span><span class="en">Teaching &amp; mentoring</span></h2>
+    <div class="list">
+      <div class="item"><div class="ico alt">GRAD</div><div>
+        <h3 class="zh">Biodesign 醫療創新方法學</h3><h3 class="en">Medical innovation with Stanford Biodesign</h3>
+        <div class="t3 zh">研究所 ・ 全英語授課 ・ 雙和校區 ・ 2026 秋</div><div class="t3 en">Graduate · English-medium · Shuang Ho campus · Fall 2026</div>
+        <p class="d zh">以 Stanford Biodesign 方法學帶學生從臨床需求出發，走完發想、篩選與驗證。</p><p class="d en">Students move from clinical needs to concept, screening, and validation using the Biodesign process.</p></div></div>
+      <div class="item"><div class="ico alt">UG</div><div>
+        <h3 class="zh">健康照護資訊應用</h3><h3 class="en">Healthcare Informatics Application</h3>
+        <div class="t3 zh">大學部 ・ 高齡健康暨長期照護學系 ・ 2026 秋</div><div class="t3 en">Undergraduate · School of Gerontology and Long-Term Care · Fall 2026</div>
+        <p class="d zh">資訊系統、健康物聯網與銀髮科技、AI 與臨床決策支援，到創新實作專題。</p><p class="d en">Information systems, health IoT and age-tech, AI and clinical decision support, and an innovation project.</p></div></div>
+      <div class="item"><div class="ico alt">HS</div><div>
+        <h3 class="zh">智慧醫療 AI 實戰寒假營</h3><h3 class="en">Smart Healthcare AI Winter Camp</h3>
+        <div class="t3 zh">高中生 ・ 課程設計與授課</div><div class="t3 en">High school students · Co-designer and instructor</div>
+        <p class="d zh">思考方法、生成式 AI 運用與簡報表達，結合臨床情境實作。</p><p class="d en">Structured thinking, generative AI, and presentation skills through clinical scenarios.</p></div></div>
+      <div class="item"><div class="ico alt">LAB</div><div>
+        <h3 class="zh">研究實習與研究生指導</h3><h3 class="en">Research internships &amp; student mentoring</h3>
+        <div class="t3 zh">國內外實習生 ・ 研究生 ・ 大專生研究計畫</div><div class="t3 en">Interns from Taiwan and abroad · Graduate students · Undergraduate research projects</div>
+        <p class="d zh">帶領學生參與慢性病數位健康、醫療 AI 與臨床資料研究，包含教育部 TEEP 國際實習等管道。</p><p class="d en">Students join projects in chronic-disease digital health, medical AI, and clinical data research, through channels including Taiwan's TEEP international internship program.</p></div></div>
+      <div class="item"><div class="ico alt">★</div><div>
+        <h3 class="zh">北醫師生聯合學術研究發表 佳作</h3><h3 class="en">Honorable Mention, TMU Student-Faculty Joint Research Presentation</h3>
+        <div class="t3 zh">2020 ・ 指導大專生研究計畫</div><div class="t3 en">2020 · As supervisor of an undergraduate research project</div></div></div>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section class="card" id="ventures">
+    <h2><span class="zh">新創與產學聯盟</span><span class="en">Ventures &amp; alliance</span></h2>
+    <div class="list">
+      <div class="item"><div class="ico vico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M10.9 7l-4.8 9M13.1 7l4.8 9M7.2 18h9.6"/></svg></div><div>
+        <h3 class="zh">執行長</h3><h3 class="en">Executive Director</h3>
+        <div class="t2 zh">DHT 數位健康新創轉譯產學聯盟</div><div class="t2 en">DHT Digital Health Alliance</div><div class="t3"><a href="https://dht.ichit.net/">dht.ichit.net ↗</a></div>
+        <p class="d zh">國科會補助、北醫主辦。協助數位健康新創進行場域驗證與臨床資料驗證，串連人才培育與產學合作資源。</p>
+        <p class="d en">NSTC-funded and hosted at TMU. Supports digital health startups with field validation and clinical data verification, and connects them to talent and partnership programs.</p></div></div>
+      <div class="item"><div class="ico vico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8.5 13.5l2.2 2.2 4.3-4.4"/></svg></div><div>
+        <h3 class="zh">共同創辦人</h3><h3 class="en">Co-founder</h3>
+        <div class="t2 zh">愛達特力 iDocly</div><div class="t2 en">iDocly Inc.</div><div class="t3"><a href="https://doclyai.net/">doclyai.net ↗</a></div>
+        <p class="d zh">北醫衍生新創，針對臨床文件做語意一致性比對與錯誤標示，協助醫療人員安全使用 AI 生成的病歷。已提出台、美、歐專利申請。</p>
+        <p class="d en">TMU spin-off that checks clinical documents for semantic consistency and flags errors in AI-generated records. Patent applications filed in Taiwan, the US, and Europe.</p></div></div>
+      <div class="item"><div class="ico vico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21v-7"/><path d="M12 14c-3 0-5-2-5-5 3 0 5 2 5 5zM12 14c3 0 5-2 5-5-3 0-5 2-5 5z"/><circle cx="12" cy="6" r="2.6"/></svg></div><div>
+        <h3 class="zh">產學合作</h3><h3 class="en">Academic partner</h3>
+        <div class="t2">婦嬣健康科技 FLOURISHE</div>
+        <p class="d zh">以乳癌預後預測研究為基礎的存活照護平台，提供醫師與病人兩種介面。</p>
+        <p class="d en">Breast cancer prognosis and survivorship platform with separate clinician and patient views.</p></div></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="card" id="skills">
+    <h2><span class="zh">專長</span><span class="en">Skills</span></h2>
+    <div class="skills" id="skillList"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="card" id="contact">
+    <h2><span class="zh">合作與演講邀約</span><span class="en">Collaboration &amp; speaking</span></h2>
+    <p class="zh">想談哪一類合作？選一項，我幫你準備好信件主旨。</p>
+    <p class="en">What would you like to discuss? Pick one and I will prepare an email subject line for you.</p>
+    <div class="intent chips" role="group" id="intent"></div>
+    <div class="mailbox">
+      <div class="mrow"><span class="lab">Email</span><span class="val" id="email">gracehuang@tmu.edu.tw</span><button class="copy" type="button" data-copy="email"><span class="zh">複製</span><span class="en">Copy</span></button></div>
+      <div class="mrow"><span class="lab zh">主旨</span><span class="lab en">Subject</span><span class="val" id="subject"></span><button class="copy" type="button" data-copy="subject"><span class="zh">複製</span><span class="en">Copy</span></button></div>
+    </div>
+    <p class="addr zh">臺北醫學大學 醫學科技學院 健康資訊科技國際研究中心（ICHIT），台北</p>
+    <p class="addr en">International Center for Health Information Technology, College of Medical Science and Technology, Taipei Medical University, Taipei, Taiwan</p>
+  </section>
 </div>
+
+<!-- RAIL -->
+<aside class="rail">
+  <section class="card open">
+    <h2><span class="zh">開放合作</span><span class="en">Open to</span></h2>
+    <ul class="zh"><li>研究合作與共同計畫</li><li>演講與工作坊</li><li>醫療 AI 場域驗證</li><li>研究生與國際實習生</li></ul>
+    <ul class="en"><li>Research collaboration</li><li>Talks and workshops</li><li>Clinical validation of medical AI</li><li>Graduate students and interns</li></ul>
+  </section>
+  <section class="card">
+    <h2><span class="zh">學術檔案</span><span class="en">Academic profiles</span></h2>
+    <div class="links">
+      <a href="https://orcid.org/0000-0002-2551-6199"><b>ORCID</b><span>0000-0002-2551-6199</span></a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=56402033000"><b>Scopus</b><span>56402033000</span></a>
+      <a href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/"><b>TMU Hub</b><span>Pure</span></a>
+    </div>
+  </section>
+  <section class="card">
+    <h2><span class="zh">相關網站</span><span class="en">Websites</span></h2>
+    <div class="links">
+      <a href="https://dht.ichit.net/"><b>DHT 產學聯盟</b><span>dht.ichit.net</span></a>
+      <a href="https://doclyai.net/"><b class="zh">愛達特力 iDocly</b><b class="en">iDocly</b><span>doclyai.net</span></a>
+    </div>
+  </section>
+  <section class="card langs">
+    <h2><span class="zh">語言</span><span class="en">Languages</span></h2>
+    <div><b class="zh">中文</b><b class="en">Mandarin Chinese</b><span class="zh">母語</span><span class="en">Native</span></div>
+    <div><b class="zh">英文</b><b class="en">English</b><span class="zh">專業工作能力</span><span class="en">Professional working</span></div>
+  </section>
+  <section class="card">
+    <h2><span class="zh">數據來源</span><span class="en">Metrics</span></h2>
+    <p class="sub zh">引用與 h-index 取自 TMU Hub（Pure / Scopus），2026 年 10 月。</p>
+    <p class="sub en">Citation counts and h-index from TMU Hub (Pure / Scopus), October 2026.</p>
+  </section>
+</aside>
+
+<footer><span class="zh">© 2026 黃芝瑋 ・ 最後更新 2026 年 10 月</span><span class="en">© 2026 Chih-Wei (Grace) Huang · Updated October 2026</span></footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
 
 <script>
 (function(){
-  var root=document.documentElement;
-  function setLang(l){
-    root.setAttribute('data-lang',l);
-    root.setAttribute('lang',l==='zh'?'zh-Hant-TW':'en');
-    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===l));});
-    try{localStorage.setItem('gh-lang',l);}catch(e){}
-  }
-  var init='zh';
-  try{var s=localStorage.getItem('gh-lang'); if(s==='en'||s==='zh') init=s;}catch(e){}
-  if(location.hash==='#en') init='en';
-  setLang(init);
-  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set);});});
-  var btn=document.getElementById('copy');
-  btn.addEventListener('click',function(){
-    var t=document.getElementById('email').textContent;
-    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);}
-    function done(){btn.innerHTML=root.dataset.lang==='en'?'Copied':'已複製';setTimeout(function(){btn.innerHTML='<span class="zh">複製</span><span class="en">Copy</span>';},1600);}
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,sel);}else{sel();}
-  });
+var root=document.documentElement;
+function L(){return root.getAttribute('data-lang')||'zh';}
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+function bi(zh,en){return '<span class="zh">'+zh+'</span><span class="en">'+en+'</span>';}
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* language */
+function setLang(l){root.setAttribute('data-lang',l);root.lang=l==='zh'?'zh-Hant-TW':'en';
+  document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===l));});
+  store('gh-lang',l);renderSubject();}
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.set);};});
+
+/* toast */
+var tt;function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show');},1700);}
+
+/* external links new tab */
+document.querySelectorAll('a[href^="http"]').forEach(function(a){a.target='_blank';a.rel='noopener';});
+
+/* more menu */
+var mb=document.getElementById('moreBtn'),mm=document.getElementById('moreMenu');
+mb.onclick=function(e){e.stopPropagation();mm.hidden=!mm.hidden;mb.setAttribute('aria-expanded',String(!mm.hidden));};
+document.addEventListener('click',function(e){if(!mm.hidden&&!mm.contains(e.target)){mm.hidden=true;mb.setAttribute('aria-expanded','false');}});
+
+/* avatar ring */
+var ringT=['#OPEN TO COLLABORATE','#開放合作・歡迎來信','#CLINICAL AI','#DIGITAL HEALTH'],ri=0;
+document.getElementById('avatar').onclick=function(){ri=(ri+1)%ringT.length;document.getElementById('ringtxt').textContent=ringT[ri];};
+
+/* about */
+var at=document.getElementById('aboutText'),am=document.getElementById('aboutMore');
+am.onclick=function(){var o=at.classList.toggle('clamp');am.setAttribute('aria-expanded',String(!o));am.innerHTML=o?bi('…看更多','…see more'):bi('收合','show less');};
+
+/* pipeline */
+var stages=[
+ {zh:'資料',en:'Data',tag:'TMUCRD · EHR',dzh:'三院長期電子病歷整合成可研究的資料。',den:'Longitudinal EHR from three hospitals, organized for research.',xzh:'例：TMUCRD 多院區世代與病例對照研究；兒童生長資料回溯研究。',xen:'e.g. Multi-site cohort and case-control studies on TMUCRD; a retrospective pediatric growth study.'},
+ {zh:'模型',en:'Model',tag:'ML · LLM',dzh:'建立預測模型，並比較傳統機器學習與新一代基礎模型。',den:'Prediction models, benchmarking classical ML against newer foundation models.',xzh:'例：PSA 灰區攝護腺癌預測；乳癌存活預測；慢性腎臟病降壓藥物 ML 研究。',xen:'e.g. Prostate cancer prediction in the PSA gray zone; breast cancer survival prediction; CKD antihypertensive ML.'},
+ {zh:'驗證',en:'Validation',tag:'External · RCT',dzh:'外部驗證與隨機對照試驗，確認模型與介入在真實情境有效。',den:'External validation and randomized trials to test models and interventions in real settings.',xzh:'例：透析中運動 RCT；50 位臨床人員參與的 AI 文件審查使用者研究。',xen:'e.g. Intradialytic exercise RCT; a 50-clinician user study of AI documentation review.'},
+ {zh:'轉譯',en:'Translation',tag:'IRB · Industry',dzh:'把研究成果接上產業：研究設計、IRB、使用者研究與產學合作。',den:'Connecting research to industry through study design, IRB, user research, and partnerships.',xzh:'例：醫療 AI 產品的臨床研究規劃與 IRB 送審；國科會產學合作計畫；北醫 SPARK 創業輔導。',xen:'e.g. Clinical study planning and IRB submissions for medical AI products; NSTC industry-academia projects; TMU SPARK startup advising.'},
+ {zh:'臨床落地',en:'Bedside',tag:'Field deployment',dzh:'透過聯盟與新創，把工具帶進醫院與照護現場。',den:'Bringing tools into hospitals and care settings through the alliance and startups.',xzh:'例：DHT 數位健康新創轉譯產學聯盟的場域驗證；愛達特力 iDocly 於醫學中心的病歷錯誤偵測導入研究。',xen:'e.g. DHT field validation; iDocly discharge-summary error detection studies in hospitals.'}];
+var pipe=document.getElementById('pipe'),det=document.getElementById('stageDetail'),cur=0,timer=null;
+stages.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.className='stage';b.setAttribute('role','tab');b.id='stage-'+i;
+ b.innerHTML='<span class="no">0'+(i+1)+'</span><b>'+bi(s.zh,s.en)+'</b><small>'+s.tag+'</small><span class="bar"></span>';
+ b.onclick=function(){stopAuto();pick(i);};pipe.appendChild(b);});
+function pick(i){cur=i;pipe.querySelectorAll('.stage').forEach(function(b,j){b.setAttribute('aria-selected',String(j===i));});
+ var s=stages[i];det.innerHTML='<h3>'+bi(s.zh,s.en)+'</h3><span class="sub">'+(i+1)+' / 5</span><p>'+bi(s.dzh,s.den)+'</p><p class="ex">'+bi(s.xzh,s.xen)+'</p>';}
+var ab=document.getElementById('autoBtn');
+function stopAuto(){clearInterval(timer);timer=null;ab.setAttribute('aria-pressed','false');ab.innerHTML=bi('▶ 自動播放','▶ Play');}
+ab.onclick=function(){if(timer){stopAuto();return;}ab.setAttribute('aria-pressed','true');ab.innerHTML=bi('❚❚ 暫停','❚❚ Pause');pick((cur+1)%5);timer=setInterval(function(){pick((cur+1)%5);},2600);};
+pick(0);
+
+/* research themes */
+var ico={ai:'<path d="M9 3h6M12 3v3M5 9a7 7 0 0 1 14 0v5a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><circle cx="9.5" cy="11.5" r="1"/><circle cx="14.5" cy="11.5" r="1"/><path d="M9 21h6"/>',
+ kid:'<path d="M8 4c-3 0-5 3-5 7 0 5 3 9 6 9 2 0 2-3 1-5-1-2 0-5 2-6"/><path d="M16 4c3 0 5 3 5 7 0 5-3 9-6 9-2 0-2-3-1-5 1-2 0-5-2-6"/>',
+ reg:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ data:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>'};
+var themes=[
+ {i:'ai',zh:'臨床 AI 驗證方法學',en:'Clinical AI validation',pzh:'多院區電子病歷的預測模型與外部驗證，以及 LLM 在臨床文件中的安全性。',pen:'Multi-site EHR prediction models, external validation, and LLM safety in clinical documentation.',xzh:'重視模型在不同醫院間的效能落差，以及 AI 生成內容的錯誤偵測。',xen:'I focus on how performance shifts across hospitals and on detecting errors in AI-generated content.'},
+ {i:'kid',zh:'慢性腎臟病數位健康',en:'Digital health for CKD',pzh:'血液透析族群的數位介入、穿戴裝置，以及生成式 AI 衛教。',pen:'Digital interventions, wearables, and generative-AI education for hemodialysis patients.',xzh:'以隨機對照試驗評估臨床效能，並納入成本效益與性別差異分析。',xen:'Evaluated with randomized trials, including cost-effectiveness and gender-difference analyses.'},
+ {i:'reg',zh:'臨床轉譯與產學合作',en:'Translation & partnerships',pzh:'把研究成果接上醫院與產業：研究設計、IRB、場域驗證與產學合作。',pen:'Connecting research to hospitals and industry through study design, IRB, field validation, and partnerships.',xzh:'透過 DHT 數位健康新創轉譯產學聯盟、產學合作計畫與新創，縮短研究到臨床使用的距離。',xen:'Through the DHT Alliance, industry-academia projects, and startups, I shorten the path from research to clinical use.'},
+ {i:'data',zh:'醫療大數據分析',en:'Health big-data analytics',pzh:'藥物暴露與癌症、心血管、神經退化疾病風險的世代與病例對照研究。',pen:'Cohort and case-control studies of drug exposure and cancer, cardiovascular, and neurodegenerative risk.',xzh:'結合統合分析與視覺化方法，讓複雜的臨床資料更容易解讀。',xen:'Combined with meta-analysis and visual analytics to make complex clinical data readable.'}];
+var tw=document.getElementById('themes');
+themes.forEach(function(t){var b=document.createElement('button');b.type='button';b.className='theme';b.setAttribute('aria-expanded','false');
+ b.innerHTML='<span class="ic"><svg viewBox="0 0 24 24">'+ico[t.i]+'</svg></span><h3>'+bi(t.zh,t.en)+'</h3><p>'+bi(t.pzh,t.pen)+'</p><p class="x" hidden>'+bi(t.xzh,t.xen)+'</p><span class="tog">'+bi('展開 +','More +')+'</span>';
+ b.onclick=function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.querySelector('.x').hidden=o;b.querySelector('.tog').innerHTML=o?bi('展開 +','More +'):bi('收合 −','Less −');};
+ tw.appendChild(b);});
+
+/* publications */
+var pubs=[
+ {y:2026,t:'An evidence gap map of digital health interventions for enhancing patient engagement in healthcare',a:'Iqbal U, Manga YB, Nkhoma DE, … <strong>Huang C-W</strong>, … Celi LA, Li Y-CJ, Kohler F.',j:'npj Digital Medicine',k:['dh','rev']},
+ {y:2026,t:'Interpretable machine learning framework for predicting major adverse cardiovascular events in rheumatoid arthritis using electronic health records: multicenter cohort study',a:'Chiang WC, Lin GL, Chang YS, Liu YC, <strong>Huang CW</strong>, Nguyen PA, Hsu JC, Liou DM, Yang HC.',j:'JMIR Formative Research 10:e91790',k:['ai']},
+ {y:2026,t:'Association between long-term use of H2 receptor antagonists and prostate cancer risk: a case-control study in Taiwan',a:'Wang SF, Liu YC, Nguyen PA, Lin GL, <strong>Huang CW</strong>, Rahmanti AR, Yang HC.',j:'Journal of Cancer 17(2):419–426',k:['epi']},
+ {y:2026,t:'Effectiveness comparison of nirmatrelvir/ritonavir versus molnupiravir in COVID-19 patients with comorbidities in Taiwan: a multi-centre electronic health record study',a:'Lin WK, Lin SJ, Chang YH, … <strong>Huang CW</strong>, Yang HC, … Hsu JC.',j:'BMC Infectious Diseases 26:70',k:['epi']},
+ {y:2026,t:'Association between gout and the risk of dementia: a meta-analysis of observational studies and biological mechanisms',a:'Wang YC, Huang APH, <strong>Huang CW</strong>, Islam MM, Kung WM.',j:'International Journal of Rheumatic Diseases 29(3):e70582',k:['epi','rev']},
+ {y:2025,t:'Health risk assessment for severe COVID-19 in Taiwan: a multi-centre electronic health record study',a:'… <strong>Huang C-W</strong>, …',j:'Journal of Global Health',k:['ai','epi']}];
+var cats=[{id:'all',zh:'全部',en:'All'},{id:'ai',zh:'臨床 AI',en:'Clinical AI'},{id:'dh',zh:'數位健康',en:'Digital health'},{id:'epi',zh:'藥物流病',en:'Pharmacoepi'},{id:'rev',zh:'統合分析與回顧',en:'Reviews'}];
+var tagName={ai:'Clinical AI',dh:'Digital health',epi:'Pharmacoepidemiology',rev:'Review / meta-analysis'};
+var pl=document.getElementById('pubList'),pc=document.getElementById('pubChips');
+pubs.forEach(function(p){var d=document.createElement('div');d.className='item';d.dataset.k=p.k.join(' ');
+ d.innerHTML='<div class="ico alt" style="font-family:var(--f-mono);font-weight:500">'+p.y+'</div><div><div class="pub-t">'+p.t+'</div><div class="t3">'+p.a+'</div><div class="t3"><i>'+p.j+'</i></div><div class="tags">'+p.k.map(function(k){return '<span>'+tagName[k]+'</span>';}).join('')+'</div></div>';pl.appendChild(d);});
+cats.forEach(function(c,i){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed',String(i===0));b.innerHTML=bi(c.zh,c.en);
+ b.onclick=function(){pc.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');
+  pl.querySelectorAll('.item').forEach(function(it){it.classList.toggle('out',c.id!=='all'&&it.dataset.k.split(' ').indexOf(c.id)<0);});};pc.appendChild(b);});
+
+/* skills */
+var skills=[{zh:'醫療人工智慧',en:'Medical AI',czh:'預測模型、LLM 評估',cen:'Prediction models, LLM evaluation'},
+ {zh:'數位健康介入研究',en:'Digital health interventions',czh:'RCT 設計與執行',cen:'RCT design and conduct'},
+ {zh:'數位健康實踐',en:'Digital health practice',czh:'場域驗證、導入與使用者研究',cen:'Field validation, adoption, user research'},
+ {zh:'醫療大數據與視覺化',en:'Health big data & visualization',czh:'TMUCRD、EHR 研究',cen:'TMUCRD, EHR studies'},
+ {zh:'產學轉譯與新創',en:'Translation & startups',czh:'DHT 數位健康新創轉譯產學聯盟、愛達特力 iDocly',cen:'DHT Alliance, iDocly'}];
+var sl=document.getElementById('skillList');
+skills.forEach(function(s){var r=document.createElement('div');r.className='skill';
+ r.innerHTML='<div><b>'+bi(s.zh,s.en)+'</b><div class="t3">'+bi(s.czh,s.cen)+'</div></div>';sl.appendChild(r);});
+
+/* contact intents */
+var intents=[{zh:'研究合作',en:'Research collaboration',szh:'【研究合作】',sen:'[Research collaboration]'},
+ {zh:'演講邀約',en:'Speaking invitation',szh:'【演講邀約】',sen:'[Speaking invitation]'},
+ {zh:'醫療 AI 場域驗證',en:'Clinical validation',szh:'【場域驗證洽詢】',sen:'[Clinical validation inquiry]'},
+ {zh:'研究生／實習',en:'Students / internships',szh:'【研究生／實習洽詢】',sen:'[Student / internship inquiry]'}];
+var iw=document.getElementById('intent'),ii=0;
+intents.forEach(function(it,i){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed',String(i===0));b.innerHTML=bi(it.zh,it.en);
+ b.onclick=function(){ii=i;iw.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');renderSubject();};iw.appendChild(b);});
+function renderSubject(){var it=intents[ii],s=document.getElementById('subject');if(!s)return;
+ s.textContent=L()==='zh'?it.szh+' 來自（您的單位）的合作洽詢':it.sen+' Inquiry from (your organization)';}
+document.querySelectorAll('[data-copy]').forEach(function(b){b.onclick=function(){var el=document.getElementById(b.dataset.copy),t=el.textContent;
+ function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);toast(L()==='zh'?'已選取，請按 Ctrl/⌘+C':'Selected. Press Ctrl/⌘+C');}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){toast(L()==='zh'?'已複製':'Copied');},sel);}else sel();};});
+
+/* scrollspy */
+var links=[].slice.call(document.querySelectorAll('.tabs a'));
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-40% 0px -55% 0px'});
+ links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s);});
+ /* count-up stats once visible */
+ var done=false,so=new IntersectionObserver(function(es){if(done||!es[0].isIntersecting||reduce)return;done=true;
+  document.querySelectorAll('.stat .n').forEach(function(n){var to=+n.dataset.to,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1100);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(t0);});},{threshold:.6});
+ so.observe(document.getElementById('stats'));}
+
+/* banner network */
+var cv=document.getElementById('net'),cx=cv.getContext('2d'),W,H,dpr,pts=[],mouse={x:-999,y:-999};
+var labels=['EHR','RCT','LLM','CKD','mHealth','GenAI','IRB','DHT','TMUCRD','AI'];
+function size(){var r=cv.getBoundingClientRect();dpr=Math.min(2,window.devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+ var n=Math.round(W/22);pts=[];for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,l:i<labels.length?labels[i]:null});}
+function draw(){cx.clearRect(0,0,W,H);
+ for(var i=0;i<pts.length;i++){var p=pts[i];
+  for(var j=i+1;j<pts.length;j++){var q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);if(d<95){cx.strokeStyle='rgba(255,255,255,'+(0.22*(1-d/95))+')';cx.lineWidth=1;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke();}}
+  var md=Math.hypot(p.x-mouse.x,p.y-mouse.y);if(md<150){cx.strokeStyle='rgba(255,226,150,'+(0.75*(1-md/150))+')';cx.lineWidth=1.3;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);cx.stroke();}
+  cx.fillStyle=md<150?'#FFE296':'rgba(255,255,255,.75)';cx.beginPath();cx.arc(p.x,p.y,p.l?3:2,0,7);cx.fill();
+  if(p.l){cx.fillStyle='rgba(255,255,255,'+(md<150?.95:.55)+')';cx.font='500 10.5px "IBM Plex Mono",monospace';cx.fillText(p.l,p.x+6,p.y-5);}}}
+function step(){pts.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;});draw();if(!reduce&&!document.hidden)requestAnimationFrame(step);}
+size();draw();if(!reduce)requestAnimationFrame(step);
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&!reduce)requestAnimationFrame(step);});
+window.addEventListener('resize',function(){size();draw();});
+var ban=cv.parentElement;
+ban.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;if(reduce)draw();});
+ban.addEventListener('pointerleave',function(){mouse.x=mouse.y=-999;if(reduce)draw();});
+
+/* init lang */
+var init=store('gh-lang');if(init!=='en')init='zh';if(location.hash==='#en')init='en';setLang(init);
 })();
 </script>
 
-<script>
-document.querySelectorAll('a[href^="http"]').forEach(function(a){a.target='_blank';a.rel='noopener';});
-</script>
 </body>
 </html>
