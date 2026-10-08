@@ -8,7 +8,7 @@
 <meta property="og:description" content="Digital health practitioner. Clinical AI validation, digital health for CKD, and industry-academia translation at Taipei Medical University.">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="photo.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300796B'/%3E%3Cg stroke='white' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M32 32L32 13M32 32L50 26M32 32L44 48M32 32L20 48M32 32L14 26'/%3E%3C/g%3E%3Cg fill='white'%3E%3Ccircle cx='32' cy='13' r='5'/%3E%3Ccircle cx='50' cy='26' r='5'/%3E%3Ccircle cx='44' cy='48' r='5'/%3E%3Ccircle cx='20' cy='48' r='5'/%3E%3Ccircle cx='14' cy='26' r='5'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='8' fill='%23FFE296'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2300796B'/%3E%3Cg stroke='%23fff' stroke-width='3' stroke-linecap='round' opacity='.9'%3E%3Cpath d='M32 32L32 13M32 32L50 26M32 32L44 48M32 32L20 48M32 32L14 26'/%3E%3C/g%3E%3Cg stroke='%23fff' stroke-width='2' opacity='.35' fill='none'%3E%3Cpath d='M32 13L50 26L44 48L20 48L14 26Z'/%3E%3C/g%3E%3Cg fill='%23fff'%3E%3Ccircle cx='32' cy='13' r='4.2'/%3E%3Ccircle cx='50' cy='26' r='4.2'/%3E%3Ccircle cx='44' cy='48' r='4.2'/%3E%3Ccircle cx='20' cy='48' r='4.2'/%3E%3Ccircle cx='14' cy='26' r='4.2'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='7' fill='%23FFE296'/%3E%3C/svg%3E">
 <title>黃芝瑋 Grace Huang</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +33,7 @@
   --banner-a:#06302B; --banner-b:#0D5E55; color-scheme:dark}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:15.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 html:not([data-lang]) .en,html[data-lang="zh"] .en{display:none!important}
 html[data-lang="en"] .zh{display:none!important}
@@ -162,6 +163,29 @@ p{margin:0}
 .tags span{font-family:var(--f-mono);font-size:10.5px;padding:1px 7px;border-radius:4px;background:var(--tmu-soft);color:var(--tmu)}
 .live{font-family:var(--f-mono);font-size:10.5px;font-weight:500;color:var(--gold);border:1px solid currentColor;border-radius:3px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .item.out{display:none}
+.count{font-size:13px;font-weight:600;color:var(--muted);background:var(--hover);border-radius:999px;padding:1px 9px;vertical-align:3px}
+.lead-tag{background:var(--gold)!important;color:var(--card)!important}
+.tags .lead-tag span{background:none;padding:0;color:inherit}
+.gstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.gstats div{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;color:var(--muted);display:flex;flex-direction:column}
+.gstats b{font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums}
+.item.compact{grid-template-columns:120px minmax(0,1fr);padding:10px 0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums;padding-top:2px}
+.t2b{font-size:14.5px;font-weight:600;line-height:1.45}
+.subh{font-size:14px;font-weight:700;color:var(--muted);margin:14px 0 6px;letter-spacing:.02em}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.person{border:1px solid var(--line);border-radius:8px;padding:12px;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:10px;align-items:start}
+.pav{width:44px;height:44px;border-radius:50%;background:var(--tmu-soft);color:var(--tmu);display:grid;place-items:center;font-weight:700;font-size:14px}
+.pav.org{border-radius:8px;font-size:12px}
+.pname{font-weight:700;font-size:15px;line-height:1.35}
+.pname small{font-weight:500;color:var(--muted);font-size:12.5px}
+.t2s{font-size:13.5px;margin-top:2px}
+.pnote{font-size:12.5px;color:var(--gold);margin-top:4px;font-weight:600}
+.pstate{font-size:11px;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.pstate.now{background:var(--tmu);color:var(--on-tmu)}
+.pstate.alum{border:1px solid var(--line);color:var(--muted)}
+.tagcloud{display:flex;flex-wrap:wrap;gap:6px}
+.tagcloud span{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13.5px}
 .footer-link{display:block;text-align:center;border-top:1px solid var(--line);margin:8px -24px -22px;padding:12px;font-weight:700;color:var(--muted);text-decoration:none;font-size:14px;background:none;border-left:0;border-right:0;border-bottom:0;width:calc(100% + 48px);cursor:pointer}
 .footer-link:hover{background:var(--hover);color:var(--ink)}
 
@@ -213,6 +237,9 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
   .rail{position:static}
 }
 @media (max-width:640px){
+  .people,.gstats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .people{grid-template-columns:minmax(0,1fr)}
+  .item.compact{grid-template-columns:minmax(0,1fr);gap:0}
   .banner{height:130px}
   .avatar{width:128px;height:128px;margin-top:-72px}
   .pbody{padding:0 16px 18px}
@@ -246,6 +273,8 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
       <a href="#research"><span class="zh">研究</span><span class="en">Research</span></a>
       <a href="#publications"><span class="zh">著作</span><span class="en">Publications</span></a>
       <a href="#grants"><span class="zh">計畫</span><span class="en">Grants</span></a>
+      <a href="#lab"><span class="zh">Lab</span><span class="en">Lab</span></a>
+      <a href="#honors"><span class="zh">專利獲獎</span><span class="en">Honors</span></a>
       <a href="#experience"><span class="zh">經歷</span><span class="en">Experience</span></a>
       <a href="#teaching"><span class="zh">教學</span><span class="en">Teaching</span></a>
       <a href="#ventures"><span class="zh">新創</span><span class="en">Ventures</span></a>
@@ -291,12 +320,6 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
       <div class="actions">
         <a class="btn solid" href="#contact"><span class="zh">邀請合作</span><span class="en">Collaborate</span></a>
         <a class="btn" href="#publications"><span class="zh">查看著作</span><span class="en">Publications</span></a>
-        <button class="btn ghost" type="button" id="moreBtn" aria-expanded="false" aria-controls="moreMenu"><span class="zh">更多</span><span class="en">More</span> ▾</button>
-        <div class="menu" id="moreMenu" hidden>
-          <a href="https://orcid.org/0000-0002-2551-6199">ORCID <span>0000-0002-2551-6199</span></a>
-          <a href="https://www.scopus.com/authid/detail.uri?authorId=56402033000">Scopus <span>56402033000</span></a>
-          <a href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/">TMU Hub <span>Pure</span></a>
-        </div>
       </div>
     </div>
     <div class="stats" id="stats">
@@ -343,36 +366,82 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
 
   <!-- PUBLICATIONS -->
   <section class="card" id="publications">
-    <h2><span class="zh">近期著作</span><span class="en">Recent publications</span></h2>
+    <h2><span><span class="zh">期刊論文</span><span class="en">Journal publications</span> <span class="count" id="pubCount"></span></span></h2>
     <div class="chips" role="group" aria-label="Filter" id="pubChips"></div>
     <div class="list" id="pubList"></div>
+    <button class="more-btn" type="button" id="pubMore" hidden></button>
     <a class="footer-link" href="https://hub.tmu.edu.tw/zh/persons/chih-wei-huang/publications/"><span class="zh">在 TMU Hub 查看全部 71 項研究成果 →</span><span class="en">See all 71 research outputs on TMU Hub →</span></a>
   </section>
 
   <!-- GRANTS -->
   <section class="card" id="grants">
-    <h2><span class="zh">主持研究計畫</span><span class="en">Grants as principal investigator</span></h2>
-    <div class="list">
+    <h2><span><span class="zh">研究計畫</span><span class="en">Research grants</span></span></h2>
+    <div class="gstats">
+      <div><b>12</b><span class="zh">主持計畫</span><span class="en">as PI</span></div><div><b>33</b><span class="zh">共同主持計畫</span><span class="en">as co-PI</span></div><div><b>3</b><span class="zh">校內子計畫主持</span><span class="en">TMU sub-project PI</span></div><div><b>3</b><span class="zh">指導大專生計畫</span><span class="en">undergrad grants supervised</span></div>
+    </div>
+    <div class="chips" role="tablist" id="grantTabs">
+      <button type="button" class="chip" aria-pressed="true" data-g="pi"><span class="zh">主持</span><span class="en">As PI</span></button>
+      <button type="button" class="chip" aria-pressed="false" data-g="co"><span class="zh">共同主持（精選 20 項）</span><span class="en">As co-PI (20 selected)</span></button>
+    </div>
+    <div class="list" id="g-pi">
+      <div class="item"><div class="ico alt">IND</div><div>
+        <h3><span class="zh">基於臨床真實世界資料之兒童成長發展模型建構與牙科特徵增益分析研究<span class="live">執行中</span></span><span class="en">Child growth and development modeling from real-world clinical data with dental feature analysis<span class="live">ACTIVE</span></span></h3>
+        <div class="t2"><span class="zh">產學合作 ・ 計畫主持人</span><span class="en">Industry-academia · PI</span></div><div class="t3">2026.04 – 2026.12</div></div></div>
+      <div class="item"><div class="ico alt">IND</div><div>
+        <h3><span class="zh">超音波導引血管進入及神經阻斷訓練模組開發之前導研究<span class="live">執行中</span></span><span class="en">Pilot study of an ultrasound-guided vascular access and nerve block training module<span class="live">ACTIVE</span></span></h3>
+        <div class="t2"><span class="zh">產學合作 ・ 計畫主持人</span><span class="en">Industry-academia · PI</span></div><div class="t3">2026.03 – 2026.08</div></div></div>
+      <div class="item"><div class="ico alt">IND</div><div>
+        <h3><span class="zh">臨床數據驅動之乳癌風險預測與決策支援工具開發</span><span class="en">Breast cancer risk prediction and decision support from clinical data</span></h3>
+        <div class="t2"><span class="zh">產學合作 ・ 計畫主持人</span><span class="en">Industry-academia · PI</span></div><div class="t3">2025.09 – 2026.02</div></div></div>
       <div class="item"><div class="ico">NSTC</div><div>
-        <h3 class="zh">運用生成式人工智慧於慢性腎臟病衛教之能力、臨床效能與成本效益評估<span class="live">執行中</span></h3>
-        <h3 class="en">Capabilities, clinical effectiveness, and cost-effectiveness of generative AI for CKD patient education<span class="live">ACTIVE</span></h3>
-        <div class="t2 zh">國家科學及技術委員會 ・ 計畫主持人</div><div class="t2 en">National Science and Technology Council · PI</div>
-        <div class="t3">2025.08 – 2027.07</div></div></div>
+        <h3><span class="zh">運用生成式人工智慧於慢性腎臟病衛教之能力、臨床效能與成本效益評估<span class="live">執行中</span></span><span class="en">Capabilities, clinical effectiveness, and cost-effectiveness of generative AI for CKD patient education<span class="live">ACTIVE</span></span></h3>
+        <div class="t2"><span class="zh">國科會專題研究計畫 ・ 計畫主持人</span><span class="en">NSTC research grant · PI</span></div><div class="t3">2025.08 – 2027.07</div></div></div>
       <div class="item"><div class="ico">NSTC</div><div>
-        <h3 class="zh">以活動為基礎之壓傷預測智慧鏡頭與臨床驗證應用計畫</h3>
-        <h3 class="en">Activity-based smart camera for pressure injury prediction and clinical validation</h3>
-        <div class="t2 zh">國科會產學合作計畫 ・ 計畫主持人</div><div class="t2 en">NSTC Industry-Academia Collaboration · PI</div>
-        <div class="t3">2025.06 – 2026.05</div></div></div>
+        <h3><span class="zh">以活動為基礎之壓傷預測智慧鏡頭與臨床驗證應用計畫<span class="live">執行中</span></span><span class="en">Activity-based smart camera for pressure injury prediction and clinical validation<span class="live">ACTIVE</span></span></h3>
+        <div class="t2"><span class="zh">國科會產學合作計畫 ・ 計畫主持人</span><span class="en">NSTC industry-academia grant · PI</span></div><div class="t3">2025.06 – 2027.05</div></div></div>
+      <div class="item"><div class="ico alt">IND</div><div>
+        <h3><span class="zh">臨床不良事件醫學模擬影像收案與分析</span><span class="en">Simulation video collection and analysis of clinical adverse events</span></h3>
+        <div class="t2"><span class="zh">產學合作 ・ 計畫主持人</span><span class="en">Industry-academia · PI</span></div><div class="t3">2025.02 – 2025.08</div></div></div>
+      <div class="item"><div class="ico alt">IND</div><div>
+        <h3><span class="zh">智慧床墊醫學模擬收案與分析</span><span class="en">Smart mattress validation in medical simulation</span></h3>
+        <div class="t2"><span class="zh">產學合作 ・ 計畫主持人</span><span class="en">Industry-academia · PI</span></div><div class="t3">2025.01 – 2025.07</div></div></div>
       <div class="item"><div class="ico">NSTC</div><div>
-        <h3 class="zh">性別差異對數位健康介入效果的影響：慢性腎臟病患者的預後評估</h3>
-        <h3 class="en">Gender differences in the effectiveness of digital health interventions for CKD</h3>
-        <div class="t2 zh">國家科學及技術委員會 ・ 計畫主持人</div><div class="t2 en">NSTC · PI</div>
-        <div class="t3">2024.08 – 2025.07</div></div></div>
+        <h3><span class="zh">性別差異對數位健康介入效果的影響：慢性腎臟病患者的預後評估</span><span class="en">Gender differences in the effectiveness of digital health interventions for CKD</span></h3>
+        <div class="t2"><span class="zh">國科會性別與科技研究計畫 ・ 計畫主持人</span><span class="en">NSTC gender and technology grant · PI</span></div><div class="t3">2024.08 – 2025.07</div></div></div>
       <div class="item"><div class="ico">NSTC</div><div>
-        <h3 class="zh">利用臨床表型與穿戴式生理量測資料建立多模態透析病人個人化骨鬆骨折風險預測模型</h3>
-        <h3 class="en">Multimodal personalized fracture-risk prediction for dialysis patients using clinical and wearable data</h3>
-        <div class="t2 zh">國家科學及技術委員會 ・ 計畫主持人（多年期）</div><div class="t2 en">NSTC · PI (multi-year)</div>
-        <div class="t3">– 2025.07</div></div></div>
+        <h3><span class="zh">利用臨床表型與穿戴式生理量測資料建立多模態透析病人個人化骨鬆骨折風險預測模型</span><span class="en">Multimodal personalized fracture-risk prediction for dialysis patients using clinical and wearable data</span></h3>
+        <div class="t2"><span class="zh">國科會專題研究計畫（兩年） ・ 計畫主持人</span><span class="en">NSTC research grant (2 years) · PI</span></div><div class="t3">2023.08 – 2025.07</div></div></div>
+      <div class="item"><div class="ico alt">SH</div><div>
+        <h3><span class="zh">營養不良－發炎複合症分數（MICS）對不同副甲狀腺素初次透析患者骨折的影響：多中心數據庫研究</span><span class="en">Malnutrition-inflammation score and fracture risk in incident dialysis patients: a multicenter database study</span></h3>
+        <div class="t2"><span class="zh">雙和醫院特色研究計畫 ・ 計畫主持人</span><span class="en">Shuang Ho Hospital research grant · PI</span></div><div class="t3">2023.05 – 2024.04</div></div></div>
+      <div class="item"><div class="ico">MOST</div><div>
+        <h3><span class="zh">利用電子病歷與個人健康資訊建構慢性腎臟病人之紅血球生成刺激劑智慧給藥模型</span><span class="en">Smart ESA dosing model for CKD patients from EHR and personal health data</span></h3>
+        <div class="t2"><span class="zh">科技部專題研究計畫（含延續） ・ 計畫主持人</span><span class="en">MOST research grant (with extension) · PI</span></div><div class="t3">2019.08 – 2021.03</div></div></div>
+      <div class="item"><div class="ico alt">TMU</div><div>
+        <h3><span class="zh">新聘教師研究補助</span><span class="en">New faculty research grant</span></h3>
+        <div class="t2"><span class="zh">臺北醫學大學 ・ 計畫主持人</span><span class="en">Taipei Medical University · PI</span></div><div class="t3">2018.08 – 2020.07</div></div></div>
+    </div>
+    <div class="list" id="g-co" hidden>
+      <div class="item compact"><div class="t3 mono">2026.02 – 2027.01</div><div><div class="t2b"><span class="zh">數位健康新創轉譯產學聯盟（1/3 至 3/3）</span><span class="en">DHT Digital Health Alliance (years 1–3)</span></div><div class="t3"><span class="zh">國科會產學技術聯盟 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.12 – 2026.12</div><div><div class="t2b"><span class="zh">建構白沙屯媽祖繞境行動醫療照護系統之研究</span><span class="en">Mobile emergency care system for the Baishatun Mazu pilgrimage</span></div><div class="t3"><span class="zh">衛生福利部 ・ 共同主持人</span><span class="en">MOHW · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.08 – 2026.07</div><div><div class="t2b"><span class="zh">結合機器學習和前瞻性臨床研究的腫瘤腎病學新方法</span><span class="en">Machine learning and prospective research in onco-nephrology</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.08 – 2026.07</div><div><div class="t2b"><span class="zh">虛擬 OSCE 考官：賦能學生，助力教師</span><span class="en">Virtual OSCE examiner</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.08 – 2026.07</div><div><div class="t2b"><span class="zh">模擬教案圖書館：人機協作之醫學模擬教案智能生成平台</span><span class="en">AI-assisted medical simulation scenario library</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.08 – 2026.07</div><div><div class="t2b"><span class="zh">護理紀錄生成摘要內容之正確性與臨床實用性評估</span><span class="en">Accuracy and usefulness of AI-generated nursing record summaries</span></div><div class="t3"><span class="zh">雙和醫院 ・ 共同主持人</span><span class="en">Shuang Ho Hospital · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.08 – 2026.07</div><div><div class="t2b"><span class="zh">以數位健康轉譯為核心之女性 STEM 跨域育成計畫</span><span class="en">Women in STEM through digital health translation</span></div><div class="t3"><span class="zh">教育部 ・ 共同主持人</span><span class="en">Ministry of Education · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025.01 – 2026.04</div><div><div class="t2b"><span class="zh">臨床深度推論之醫療專用大型語言模型開發及商業化服務計畫</span><span class="en">Clinical-reasoning medical LLM development and commercialization</span></div><div class="t3"><span class="zh">經濟部學界科專 ・ 共同主持人</span><span class="en">Ministry of Economic Affairs · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2024.08 – 2026.07</div><div><div class="t2b"><span class="zh">以針對性風險降低策略為年輕世代提供個性化之健康賦權</span><span class="en">Personalized health empowerment for young people</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2024.07 – 2026.06</div><div><div class="t2b"><span class="zh">開發 ICU 腦損傷病人意識監測及預後決策支援系統</span><span class="en">ICU consciousness monitoring and prognosis support for brain injury</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2024.05 – 2027.04</div><div><div class="t2b"><span class="zh">透過基於人工智慧的健康風險評估以鼓勵青少年之行為改變</span><span class="en">AI-based health risk evaluation for adolescent behavior change (EU–Taiwan)</span></div><div class="t3"><span class="zh">國科會雙邊國際合作 ・ 共同主持人</span><span class="en">NSTC bilateral · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2023.11 – 2025.04</div><div><div class="t2b"><span class="zh">急性主動脈剝離症候群人工智慧醫療器材軟體：多中心效能驗證</span><span class="en">Multicenter validation of an AI tool for acute aortic syndrome</span></div><div class="t3"><span class="zh">國科會產學合作 ・ 共同主持人</span><span class="en">NSTC industry-academia · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2023.08 – 2026.07</div><div><div class="t2b"><span class="zh">褪黑激素在慢性腎病礦物質與骨骼疾病的新作用機制</span><span class="en">Melatonin in CKD mineral and bone disorder</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2023.08 – 2025.07</div><div><div class="t2b"><span class="zh">同理心溫度計：場域驗證與導入成效評估研究</span><span class="en">Empathy thermometer: field validation and adoption</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2023.08 – 2025.07</div><div><div class="t2b"><span class="zh">新冠肺炎重症、死亡、長期併發症的影響因素及個人化預測模型</span><span class="en">Personalized prediction of severe COVID-19 outcomes</span></div><div class="t3"><span class="zh">國科會 ・ 共同主持人</span><span class="en">NSTC · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2022.08 – 2025.07</div><div><div class="t2b"><span class="zh">以人工智慧為本的虛擬考官建置操作技能自學系統：以基本救命術為例</span><span class="en">AI virtual examiner for BLS skills self-learning</span></div><div class="t3"><span class="zh">科技部 ・ 共同主持人</span><span class="en">MOST · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2022.06 – 2024.05</div><div><div class="t2b"><span class="zh">智慧醫療產學聯盟：建立第一個跨國開放式意識監測平台系統</span><span class="en">Smart healthcare alliance: open consciousness monitoring platform</span></div><div class="t3"><span class="zh">科技部 ・ 共同主持人</span><span class="en">MOST · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2021.08 – 2023.07</div><div><div class="t2b"><span class="zh">打造即時「同理心溫度計」協助醫病互動</span><span class="en">Real-time empathy thermometer for doctor-patient interaction</span></div><div class="t3"><span class="zh">科技部 ・ 共同主持人</span><span class="en">MOST · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2020.06 – 2022.05</div><div><div class="t2b"><span class="zh">首創運用深度學習開發長期臥床病人壓瘡變化預測智慧鏡頭</span><span class="en">Deep learning smart camera for pressure injury prediction</span></div><div class="t3"><span class="zh">科技部產學合作 ・ 共同主持人</span><span class="en">MOST industry-academia · Co-PI</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2020.02 – 2021.09</div><div><div class="t2b"><span class="zh">運用資料探勘建立長期用藥與癌症發生之個人化風險矩陣</span><span class="en">Personalized risk matrix of long-term medication use and cancer</span></div><div class="t3"><span class="zh">科技部 ・ 共同主持人</span><span class="en">MOST · Co-PI</span></div></div></div>
     </div>
   </section>
 
@@ -384,7 +453,9 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
         <h3 class="zh">臺北醫學大學</h3><h3 class="en">Taipei Medical University</h3>
         <div class="t3 zh">2016 至今 ・ 10 年</div><div class="t3 en">2016 – present · 10 yrs</div>
         <div class="roles" style="margin-top:8px">
-          <div class="role now"><div class="t2"><b class="zh">研究員</b><b class="en">Research Fellow</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2025 至今</div><div class="t3 en">Intl. Center for Health Information Technology · 2025 – present</div></div>
+          <div class="role now"><div class="t2"><b class="zh">副主任</b><b class="en">Deputy Director</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2025.11 至今</div><div class="t3 en">Intl. Center for Health Information Technology · Nov 2025 – present</div></div>
+          <div class="role now"><div class="t2"><b class="zh">研究員</b><b class="en">Research Fellow</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2025.08 至今</div><div class="t3 en">Intl. Center for Health Information Technology · Aug 2025 – present</div></div>
+          <div class="role now"><div class="t2"><b class="zh">執行長</b><b class="en">Executive Director</b></div><div class="t3 zh">DHT 數位健康新創轉譯產學聯盟 ・ 2024.02 至今</div><div class="t3 en">DHT Digital Health Alliance · Feb 2024 – present</div></div>
           <div class="role now"><div class="t2"><b class="zh">兼任助理教授</b><b class="en">Adjunct Assistant Professor</b></div><div class="t3 zh">醫學資訊研究所 ・ 2023 至今</div><div class="t3 en">Graduate Institute of Biomedical Informatics · 2023 – present</div></div>
           <div class="role now"><div class="t2"><b class="zh">兼任研究員</b><b class="en">Adjunct Research Fellow</b></div><div class="t3 zh">醫學模擬教育中心 ・ 2022 至今</div><div class="t3 en">Center for Education in Medical Simulation · 2022 – present</div></div>
           <div class="role now"><div class="t2"><b class="zh">創業顧問</b><b class="en">Startup Advisor</b></div><div class="t3 zh">TMU SPARK ・ 2020 至今</div><div class="t3 en">TMU SPARK · 2020 – present</div></div>
@@ -392,6 +463,13 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
           <div class="role"><div class="t2"><b class="zh">助理研究員</b><b class="en">Assistant Research Fellow</b></div><div class="t3 zh">健康資訊科技國際研究中心 ・ 2018 – 2022</div><div class="t3 en">ICHIT · 2018 – 2022</div></div>
           <div class="role"><div class="t2"><b class="zh">博士後研究員</b><b class="en">Postdoctoral Fellow</b></div><div class="t3 zh">醫學資訊研究所 ・ 2016 – 2017</div><div class="t3 en">Biomedical Informatics · 2016 – 2017</div></div>
         </div></div></div>
+      <div class="item"><div class="ico alt">OH</div><div>
+        <h3 class="zh">秘書長</h3><h3 class="en">Secretary General</h3>
+        <div class="t2 zh">臺灣觀察性健康資料研究學會（OHDSI Taiwan）</div><div class="t2 en">OHDSI Taiwan</div></div></div>
+      <div class="item"><div class="ico alt">NSTC</div><div>
+        <h3 class="zh">專題計畫審查委員</h3><h3 class="en">Grant reviewer</h3>
+        <div class="t2 zh">國科會人文處 管理一學門</div><div class="t2 en">NSTC, Humanities and Social Sciences (Management I)</div>
+        <div class="t3">2024 – 2026</div></div></div>
       <div class="item"><div class="ico alt">JCT</div><div>
         <h3 class="zh">副研究員</h3><h3 class="en">Associate Researcher</h3>
         <div class="t2 zh">財團法人醫院評鑑暨醫療品質策進會</div><div class="t2 en">Joint Commission of Taiwan</div>
@@ -417,6 +495,14 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
         <h3 class="zh">Biodesign 醫療創新方法學</h3><h3 class="en">Medical innovation with Stanford Biodesign</h3>
         <div class="t3 zh">研究所 ・ 全英語授課 ・ 雙和校區 ・ 2026 秋</div><div class="t3 en">Graduate · English-medium · Shuang Ho campus · Fall 2026</div>
         <p class="d zh">以 Stanford Biodesign 方法學帶學生從臨床需求出發，走完發想、篩選與驗證。</p><p class="d en">Students move from clinical needs to concept, screening, and validation using the Biodesign process.</p></div></div>
+      <div class="item"><div class="ico alt">GRAD</div><div>
+        <h3 class="zh">醫療資訊處理理論與實作</h3><h3 class="en">Health Information Processing: Theory and Practice</h3>
+        <div class="t3 zh">醫學資訊研究所碩士班必修 ・ 全英語授課 ・ 主授 ・ 2024 秋起</div><div class="t3 en">Required MSc course, Biomedical Informatics · English-medium · Lead instructor · since Fall 2024</div>
+        <p class="d zh">獲 EMI 課程獎勵，課程評量 4.7 分以上（滿分 5 分）。</p><p class="d en">Received an EMI teaching award; course evaluations of 4.7 or higher out of 5.</p></div></div>
+      <div class="item"><div class="ico alt">UG</div><div>
+        <h3 class="zh">計算機概論</h3><h3 class="en">Introduction to Computer Science</h3>
+        <div class="t3 zh">醫學工程學系一年級必修 ・ 主授 ・ 2024、2025 春</div><div class="t3 en">Required first-year course, Biomedical Engineering · Lead instructor · Spring 2024, 2025</div>
+        <p class="d zh">導入 Python 程式教學與生成式 AI 應用。</p><p class="d en">Introduces Python programming and generative AI tools.</p></div></div>
       <div class="item"><div class="ico alt">UG</div><div>
         <h3 class="zh">健康照護資訊應用</h3><h3 class="en">Healthcare Informatics Application</h3>
         <div class="t3 zh">大學部 ・ 高齡健康暨長期照護學系 ・ 2026 秋</div><div class="t3 en">Undergraduate · School of Gerontology and Long-Term Care · Fall 2026</div>
@@ -425,14 +511,78 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:12.5px;pa
         <h3 class="zh">智慧醫療 AI 實戰寒假營</h3><h3 class="en">Smart Healthcare AI Winter Camp</h3>
         <div class="t3 zh">高中生 ・ 課程設計與授課</div><div class="t3 en">High school students · Co-designer and instructor</div>
         <p class="d zh">思考方法、生成式 AI 運用與簡報表達，結合臨床情境實作。</p><p class="d en">Structured thinking, generative AI, and presentation skills through clinical scenarios.</p></div></div>
-      <div class="item"><div class="ico alt">LAB</div><div>
-        <h3 class="zh">研究實習與研究生指導</h3><h3 class="en">Research internships &amp; student mentoring</h3>
-        <div class="t3 zh">國內外實習生 ・ 研究生 ・ 大專生研究計畫</div><div class="t3 en">Interns from Taiwan and abroad · Graduate students · Undergraduate research projects</div>
-        <p class="d zh">帶領學生參與慢性病數位健康、醫療 AI 與臨床資料研究，包含教育部 TEEP 國際實習等管道。</p><p class="d en">Students join projects in chronic-disease digital health, medical AI, and clinical data research, through channels including Taiwan's TEEP international internship program.</p></div></div>
-      <div class="item"><div class="ico alt">★</div><div>
-        <h3 class="zh">北醫師生聯合學術研究發表 佳作</h3><h3 class="en">Honorable Mention, TMU Student-Faculty Joint Research Presentation</h3>
-        <div class="t3 zh">2020 ・ 指導大專生研究計畫</div><div class="t3 en">2020 · As supervisor of an undergraduate research project</div></div></div>
+/div>
     </div>
+  </section>
+
+  <!-- LAB PEOPLE -->
+  <section class="card" id="lab">
+    <h2><span><span class="zh">Lab 夥伴</span><span class="en">Lab people</span></span></h2>
+    <div class="chips" role="tablist" id="labTabs">
+      <button type="button" class="chip" aria-pressed="true" data-t="stu"><span class="zh">學生</span><span class="en">Students</span> <span class="n">7</span></button>
+      <button type="button" class="chip" aria-pressed="false" data-t="int"><span class="zh">實習生</span><span class="en">Interns</span> <span class="n">8</span></button>
+      <button type="button" class="chip" aria-pressed="false" data-t="col"><span class="zh">合作夥伴</span><span class="en">Collaborators</span></button>
+    </div>
+    <div class="people" id="t-stu">
+      <div class="person"><div class="pav">郁庭</div><div class="pbody2"><div class="pname">林郁庭 <small>Yu-Ting Lin</small></div><div class="t3"><span class="zh">高齡健康暨長期照護學系 大學部</span><span class="en">Gerontology and Long-Term Care, undergraduate</span></div><div class="t2s"><span class="zh">透析病人個人化衛教、LLM 衛教評估、陪伴機器人</span><span class="en">Personalized dialysis education, LLM evaluation, companion robots</span></div><div class="pnote"><span class="zh">國科會大專生計畫；JCMIT 最佳口頭論文；MEDINFO 2025 口頭報告</span><span class="en">NSTC undergraduate grant; JCMIT Best Oral; MEDINFO 2025 oral</span></div></div><span class="pstate alum"><span class="zh">校友</span><span class="en">Alumni</span></span></div>
+      <div class="person"><div class="pav">佩璇</div><div class="pbody2"><div class="pname">江佩璇 <small>Pei-Syuan Chiang</small></div><div class="t3"><span class="zh">高齡健康管理學系 大學部</span><span class="en">Gerontology, undergraduate</span></div><div class="t2s"><span class="zh">健康識能與智慧手環介入高齡洗腎病人</span><span class="en">Health literacy and smartwatch intervention for older dialysis patients</span></div><div class="pnote"><span class="zh">科技部大專生計畫</span><span class="en">MOST undergraduate grant</span></div></div><span class="pstate alum"><span class="zh">校友</span><span class="en">Alumni</span></span></div>
+      <div class="person"><div class="pav">靖雯</div><div class="pbody2"><div class="pname">邵靖雯 <small>Jing-Wen Shao</small></div><div class="t3"><span class="zh">高齡健康管理學系 大學部</span><span class="en">Gerontology, undergraduate</span></div><div class="t2s"><span class="zh">居家照護陪伴機器人</span><span class="en">Companion robots for home care</span></div><div class="pnote"><span class="zh">MEDINFO 2025 共同作者</span><span class="en">MEDINFO 2025 co-author</span></div></div><span class="pstate alum"><span class="zh">校友</span><span class="en">Alumni</span></span></div>
+      <div class="person"><div class="pav">創進</div><div class="pbody2"><div class="pname">王創進 <small>Chuang-Chin Wang</small></div><div class="t3"><span class="zh">醫學系</span><span class="en">School of Medicine</span></div><div class="t2s"><span class="zh">Green AI 預測早期肺癌徵兆（與 USC 郭宗杰院士團隊合作）</span><span class="en">Green AI for early lung cancer prediction (with USC)</span></div><div class="pnote"><span class="zh">國科會大專生計畫</span><span class="en">NSTC undergraduate grant</span></div></div><span class="pstate alum"><span class="zh">校友</span><span class="en">Alumni</span></span></div>
+      <div class="person"><div class="pav">楷翔</div><div class="pbody2"><div class="pname">黃楷翔 <small>Kai-Hsiang Huang</small></div><div class="t3"><span class="zh">建國中學 高中專題</span><span class="en">Jianguo High School research project</span></div><div class="t2s"><span class="zh">疾病軌跡結合深度學習偵測胰臟癌風險</span><span class="en">Disease trajectories and deep learning for pancreatic cancer risk</span></div><div class="pnote"><span class="zh">全國科展電腦與資訊學科佳作（第四名）、聯發科技特優</span><span class="en">National Science Fair, 4th place; MediaTek award</span></div></div><span class="pstate alum"><span class="zh">校友</span><span class="en">Alumni</span></span></div>
+      <div class="person"><div class="pav">DC</div><div class="pbody2"><div class="pname">Devesh Singh Chauhan</div><div class="t3"><span class="zh">醫學資訊研究所 碩士班（2025 入學）</span><span class="en">MSc, Biomedical Informatics (2025)</span></div><div class="t2s"><span class="zh">前 IIPP、TEEP 實習生</span><span class="en">Former IIPP and TEEP intern</span></div><div class="pnote"><span class="zh">由實習生進入碩士班</span><span class="en">Joined the MSc program after internships</span></div></div><span class="pstate now"><span class="zh">現任</span><span class="en">Current</span></span></div>
+      <div class="person"><div class="pav">JC</div><div class="pbody2"><div class="pname">Jhony Anderson Wu Chen</div><div class="t3"><span class="zh">醫學資訊研究所 碩士班（2026 入學）</span><span class="en">MSc, Biomedical Informatics (2026)</span></div><div class="t2s"><span class="zh">巴拉圭籍醫師，前 TEEP 實習生</span><span class="en">Physician from Paraguay, former TEEP intern</span></div><div class="pnote"><span class="zh">由實習生進入碩士班</span><span class="en">Joined the MSc program after internship</span></div></div><span class="pstate now"><span class="zh">現任</span><span class="en">Current</span></span></div>
+    </div>
+    <div class="people" id="t-int" hidden>
+      <div class="person"><div class="pav">MS</div><div class="pbody2"><div class="pname">Maung Aye Saw</div><div class="t3"><span class="zh">緬甸 醫師；Mahidol University</span><span class="en">Physician, Myanmar; Mahidol University</span></div><div class="t2s"><span class="zh">NSPES 2025、TEEP 2026</span><span class="en">NSPES 2025, TEEP 2026</span></div><div class="pnote"><span class="zh">大型語言模型於出院摘要標註之比較；NSPES 分場最佳簡報獎</span><span class="en">LLMs for discharge summary annotation; NSPES best presentation</span></div></div><span class="pstate now"><span class="zh">現任</span><span class="en">Current</span></span></div>
+      <div class="person"><div class="pav">JC</div><div class="pbody2"><div class="pname">Jhony Anderson Wu Chen</div><div class="t3"><span class="zh">巴拉圭 Universidad Nacional del Este</span><span class="en">Universidad Nacional del Este, Paraguay</span></div><div class="t2s"><span class="zh">TEEP 2025–2026</span><span class="en">TEEP 2025–2026</span></div></div><span class="pstate now"><span class="zh">現任</span><span class="en">Current</span></span></div>
+      <div class="person"><div class="pav">GY</div><div class="pbody2"><div class="pname">Goh Hao Yi</div><div class="t3"><span class="zh">馬來西亞 Universiti Malaya</span><span class="en">Universiti Malaya, Malaysia</span></div><div class="t2s"><span class="zh">TEEP 2025</span><span class="en">TEEP 2025</span></div></div><span class="pstate alum"><span class="zh">歷屆</span><span class="en">Past</span></span></div>
+      <div class="person"><div class="pav">MH</div><div class="pbody2"><div class="pname">Muhammad Yahya Hammad</div><div class="t3"><span class="zh">馬來西亞 Universiti Malaysia Pahang（博士生）</span><span class="en">Universiti Malaysia Pahang (PhD student)</span></div><div class="t2s"><span class="zh">IIPP 2025</span><span class="en">IIPP 2025</span></div></div><span class="pstate alum"><span class="zh">歷屆</span><span class="en">Past</span></span></div>
+      <div class="person"><div class="pav">JS</div><div class="pbody2"><div class="pname">Jordan Sani</div><div class="t3"><span class="zh">法國 Grenoble INP（碩士生）</span><span class="en">Grenoble INP, France (MSc student)</span></div><div class="t2s"><span class="zh">IIPP 2025</span><span class="en">IIPP 2025</span></div></div><span class="pstate alum"><span class="zh">歷屆</span><span class="en">Past</span></span></div>
+      <div class="person"><div class="pav">DC</div><div class="pbody2"><div class="pname">Devesh Singh Chauhan</div><div class="t3"><span class="zh">印度 Shoolini University</span><span class="en">Shoolini University, India</span></div><div class="t2s"><span class="zh">IIPP 2024、TEEP 2025</span><span class="en">IIPP 2024, TEEP 2025</span></div></div><span class="pstate alum"><span class="zh">歷屆</span><span class="en">Past</span></span></div>
+      <div class="person"><div class="pav">AH</div><div class="pbody2"><div class="pname">Abdul Hannan</div><div class="t3"><span class="zh">印度 Presidency University</span><span class="en">Presidency University, India</span></div><div class="t2s"><span class="zh">IIPP 2024</span><span class="en">IIPP 2024</span></div></div><span class="pstate alum"><span class="zh">歷屆</span><span class="en">Past</span></span></div>
+      <div class="person"><div class="pav">SB</div><div class="pbody2"><div class="pname">Shoshana Bar-Meir</div><div class="t3"><span class="zh">美國 Northwestern University</span><span class="en">Northwestern University, USA</span></div><div class="t2s"><span class="zh">TEEP 2023–2024</span><span class="en">TEEP 2023–2024</span></div></div><span class="pstate alum"><span class="zh">歷屆</span><span class="en">Past</span></span></div>
+    </div>
+    <div id="t-col" hidden>
+      <h3 class="subh"><span class="zh">國際合作</span><span class="en">International</span></h3>
+      <div class="people">
+        <div class="person"><div class="pav org">USC</div><div class="pbody2"><div class="pname">USC</div><div class="t3"><span class="zh">郭宗杰院士</span><span class="en">C.-C. Jay Kuo</span></div><div class="t2s"><span class="zh">Green AI 早期肺癌數位快篩</span><span class="en">Green AI for early lung cancer screening</span></div></div></div>
+        <div class="person"><div class="pav org">SMC</div><div class="pbody2"><div class="pname">Sheba Medical Center（以色列）</div><div class="t3"><span class="zh">Eyal Zimlichman 教授</span><span class="en">Prof. Eyal Zimlichman</span></div><div class="t2s"><span class="zh">ARC Innovation 聯盟合作</span><span class="en">ARC Innovation partnership</span></div></div></div>
+        <div class="person"><div class="pav org">BWH</div><div class="pbody2"><div class="pname">Brigham and Women's Hospital</div><div class="t3"><span class="zh">Dr. Lipika Samal</span><span class="en">Dr. Lipika Samal</span></div><div class="t2s"><span class="zh">慢性腎臟病臨床決策支援</span><span class="en">CKD clinical decision support</span></div></div></div>
+        <div class="person"><div class="pav org">OHSU</div><div class="pbody2"><div class="pname">Oregon Health & Science University</div><div class="t3"><span class="zh">Dr. David Dorr</span><span class="en">Dr. David Dorr</span></div><div class="t2s"><span class="zh">血壓自我管理與數位健康</span><span class="en">Blood pressure self-management</span></div></div></div>
+        <div class="person"><div class="pav org">神戶</div><div class="pbody2"><div class="pname">神戶大學（日本）</div><div class="t3"><span class="zh">Greiner、Nakamura、Okamoto 教授</span><span class="en">Profs. Greiner, Nakamura, Okamoto</span></div><div class="t2s"><span class="zh">智慧科技支持失智症家庭照顧者</span><span class="en">Smart technology for dementia caregivers</span></div></div></div>
+        <div class="person"><div class="pav org">JSI</div><div class="pbody2"><div class="pname">Jožef Stefan Institute（斯洛維尼亞）</div><div class="t3"><span class="zh">歐盟 14 機構合作</span><span class="en">14-partner consortium</span></div><div class="t2s"><span class="zh">AI 健康風險評估促進青少年行為改變</span><span class="en">AI health risk evaluation for adolescents</span></div></div></div>
+        <div class="person"><div class="pav org">BHM</div><div class="pbody2"><div class="pname">BIDMC / Harvard Medical School</div><div class="t3"><span class="zh">Prof. Yuri Quintana</span><span class="en">Prof. Yuri Quintana</span></div><div class="t2s"><span class="zh">InfoSAGE 家戶健康管理系統中文化</span><span class="en">InfoSAGE family health platform</span></div></div></div>
+        <div class="person"><div class="pav org">FMC</div><div class="pbody2"><div class="pname">Fresenius Medical Care Renal Research Institute</div><div class="t3"><span class="zh">Dr. Peter Kotanko</span><span class="en">Dr. Peter Kotanko</span></div><div class="t2s"><span class="zh">AI 腎病與腎病視覺化研究</span><span class="en">AI and visualization in nephrology</span></div></div></div>
+        <div class="person"><div class="pav org">MIT</div><div class="pbody2"><div class="pname">MIT</div><div class="t3"><span class="zh">MIT Critical Data / Sana</span><span class="en">MIT Critical Data / Sana</span></div><div class="t2s"><span class="zh">TMU x MIT Hackathon 與 Datathon</span><span class="en">TMU x MIT Hackathon and Datathon</span></div></div></div>
+      </div>
+      <h3 class="subh"><span class="zh">臨床場域</span><span class="en">Clinical sites</span></h3>
+      <div class="tagcloud"><span>北醫附設醫院</span><span>萬芳醫院</span><span>雙和醫院</span><span>新北市立聯合醫院</span><span>童綜合醫院</span><span>蕭中正醫院</span></div>
+      <h3 class="subh"><span class="zh">產業夥伴</span><span class="en">Industry partners</span></h3>
+      <div class="tagcloud"><span>圓展科技</span><span>輔人科技</span><span>長佳智能</span><span>醫守科技</span><span>台智雲</span><span>華碩雲端</span><span>艾科科技</span><span>巨一科技</span><span>祝三實業</span><span>圖策科技</span><span>資策會</span><span>工研院資通所</span><span>IBM Taiwan</span><span>綠湖數位醫療</span></div>
+    </div>
+  </section>
+
+  <!-- PATENTS & AWARDS -->
+  <section class="card" id="honors">
+    <h2><span><span class="zh">專利與獲獎</span><span class="en">Patents &amp; awards</span></span></h2>
+    <h3 class="subh"><span class="zh">已獲准專利（中華民國）</span><span class="en">Granted patents (Taiwan)</span></h3>
+    <div class="list">
+      <div class="item compact"><div class="t3 mono">2025</div><div><div class="t2b"><span class="zh">醫療臨床技能的評核系統</span><span class="en">Assessment system for clinical skills</span></div><div class="t3"><span class="zh">發明專利</span><span class="en">Invention patent</span> I897454</div></div></div>
+      <div class="item compact"><div class="t3 mono">2024</div><div><div class="t2b"><span class="zh">資料協調的裝置及方法</span><span class="en">Device and method for data harmonization</span></div><div class="t3"><span class="zh">發明專利</span><span class="en">Invention patent</span> I867630</div></div></div>
+      <div class="item compact"><div class="t3 mono">2022</div><div><div class="t2b"><span class="zh">用於預測癌症之電腦實施方法及計算裝置</span><span class="en">Computer-implemented method and device for cancer prediction</span></div><div class="t3"><span class="zh">發明專利</span><span class="en">Invention patent</span> I770591</div></div></div>
+      <div class="item compact"><div class="t3 mono">2021</div><div><div class="t2b"><span class="zh">用於預測癌症之計算裝置</span><span class="en">Computing device for cancer prediction</span></div><div class="t3"><span class="zh">新型專利</span><span class="en">Utility model</span> M614191</div></div></div>
+    </div>
+    <p class="sub" style="margin:8px 0 18px"><span class="zh">另有壓傷監測、心血管事件預測等案於美國、中國大陸提出申請，以及生成式 AI 醫療文件驗證等 5 案申請中。</span><span class="en">Further filings in the US and China cover pressure injury monitoring and cardiovascular event prediction; five more, including verification of AI-generated clinical documents, are pending.</span></p>
+    <h3 class="subh"><span class="zh">獲獎</span><span class="en">Awards</span></h3>
+    <div class="list">
+      <div class="item compact"><div class="t3 mono">2025</div><div><div class="t2b"><span class="zh">國家新創獎 臨床新創（醫療軟體開發）</span><span class="en">National Innovation Award, Clinical Innovation (medical software)</span></div><div class="t3"><span class="zh">「Docly：杜絕 AI 幻覺，精準生成病歷摘要」團隊</span><span class="en">Team award for Docly, hallucination-free discharge summaries</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2025</div><div><div class="t2b"><span class="zh">未來科技獎</span><span class="en">FutureTech Award</span></div><div class="t3"><span class="zh">非接觸式 AI 臨床預警系統：強化壓傷風險照護品質與安全</span><span class="en">Contactless AI early-warning system for pressure injury care</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2024</div><div><div class="t2b"><span class="zh">EMI 全英語課程獎勵</span><span class="en">EMI Teaching Award</span></div><div class="t3"><span class="zh">醫療資訊處理理論與實作</span><span class="en">Health Information Processing: Theory and Practice</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2022</div><div><div class="t2b"><span class="zh">第十九屆國家新創獎 學研新創</span><span class="en">19th National Innovation Award, Academic Innovation</span></div><div class="t3"><span class="zh">「先知：利用資料科學發展肺癌數位快篩」團隊</span><span class="en">Team award for digital lung cancer screening</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2021</div><div><div class="t2b"><span class="zh">TWCC 星創爭霸 最高榮譽</span><span class="en">TWCC Startup Challenge, top honor</span></div><div class="t3"><span class="zh">獲國網中心 34,560 GPU 小時運算資源</span><span class="en">34,560 GPU hours from the National Center for High-performance Computing</span></div></div></div>
+      <div class="item compact"><div class="t3 mono">2020</div><div><div class="t2b"><span class="zh">北醫師生聯合學術研究發表 佳作</span><span class="en">TMU Student-Faculty Joint Research Presentation, Honorable Mention</span></div><div class="t3"><span class="zh">指導教師</span><span class="en">As supervisor</span></div></div></div>
+    </div>
+    <p class="sub" style="margin-top:10px"><span class="zh">指導學生獲獎：JCMIT 最佳口頭論文、全國科展佳作、NSPES 分場最佳簡報獎。</span><span class="en">Students supervised won a JCMIT Best Oral award, a National Science Fair prize, and an NSPES best presentation award.</span></p>
   </section>
 
   <!-- VENTURES -->
@@ -531,11 +681,6 @@ var tt;function toast(m){var t=document.getElementById('toast');t.textContent=m;
 /* external links new tab */
 document.querySelectorAll('a[href^="http"]').forEach(function(a){a.target='_blank';a.rel='noopener';});
 
-/* more menu */
-var mb=document.getElementById('moreBtn'),mm=document.getElementById('moreMenu');
-mb.onclick=function(e){e.stopPropagation();mm.hidden=!mm.hidden;mb.setAttribute('aria-expanded',String(!mm.hidden));};
-document.addEventListener('click',function(e){if(!mm.hidden&&!mm.contains(e.target)){mm.hidden=true;mb.setAttribute('aria-expanded','false');}});
-
 /* avatar ring */
 var ringT=['#OPEN TO COLLABORATE','#開放合作・歡迎來信','#CLINICAL AI','#DIGITAL HEALTH'],ri=0;
 document.getElementById('avatar').onclick=function(){ri=(ri+1)%ringT.length;document.getElementById('ringtxt').textContent=ringT[ri];};
@@ -583,17 +728,63 @@ var pubs=[
  {y:2026,t:'An evidence gap map of digital health interventions for enhancing patient engagement in healthcare',a:'Iqbal U, Manga YB, Nkhoma DE, … <strong>Huang C-W</strong>, … Celi LA, Li Y-CJ, Kohler F.',j:'npj Digital Medicine',k:['dh','rev']},
  {y:2026,t:'Interpretable machine learning framework for predicting major adverse cardiovascular events in rheumatoid arthritis using electronic health records: multicenter cohort study',a:'Chiang WC, Lin GL, Chang YS, Liu YC, <strong>Huang CW</strong>, Nguyen PA, Hsu JC, Liou DM, Yang HC.',j:'JMIR Formative Research 10:e91790',k:['ai']},
  {y:2026,t:'Association between long-term use of H2 receptor antagonists and prostate cancer risk: a case-control study in Taiwan',a:'Wang SF, Liu YC, Nguyen PA, Lin GL, <strong>Huang CW</strong>, Rahmanti AR, Yang HC.',j:'Journal of Cancer 17(2):419–426',k:['epi']},
- {y:2026,t:'Effectiveness comparison of nirmatrelvir/ritonavir versus molnupiravir in COVID-19 patients with comorbidities in Taiwan: a multi-centre electronic health record study',a:'Lin WK, Lin SJ, Chang YH, … <strong>Huang CW</strong>, Yang HC, … Hsu JC.',j:'BMC Infectious Diseases 26:70',k:['epi']},
+ {y:2026,t:'The potential impact of histamine-2 receptor antagonists on gynecologic cancer risk: a population-based study of 23 million individuals',a:'Chiang CJ, Nguyen NTH, <strong>Huang CW</strong>, Nguyen PA, Wang SF, Wang CH, Hung FH, Lin GL, Liu YC, Yang HC.',j:'Cancer Epidemiology, Biomarkers & Prevention 35(4):540–547',k:['epi']},
  {y:2026,t:'Association between gout and the risk of dementia: a meta-analysis of observational studies and biological mechanisms',a:'Wang YC, Huang APH, <strong>Huang CW</strong>, Islam MM, Kung WM.',j:'International Journal of Rheumatic Diseases 29(3):e70582',k:['epi','rev']},
- {y:2025,t:'Health risk assessment for severe COVID-19 in Taiwan: a multi-centre electronic health record study',a:'… <strong>Huang C-W</strong>, …',j:'Journal of Global Health',k:['ai','epi']}];
-var cats=[{id:'all',zh:'全部',en:'All'},{id:'ai',zh:'臨床 AI',en:'Clinical AI'},{id:'dh',zh:'數位健康',en:'Digital health'},{id:'epi',zh:'藥物流病',en:'Pharmacoepi'},{id:'rev',zh:'統合分析與回顧',en:'Reviews'}];
+ {y:2026,t:'Effectiveness comparison of nirmatrelvir/ritonavir versus molnupiravir in COVID-19 patients with comorbidities in Taiwan: a multi-centre electronic health record study',a:'Lin WK, Lin SJ, Chang YH, … <strong>Huang CW</strong>, Yang HC, … Hsu JC.',j:'BMC Infectious Diseases 26(1):70',k:['epi']},
+ {y:2025,t:'Health risk assessment for severe COVID-19 in Taiwan: a multi-centre electronic health record study',a:'Chang YH, Burton W, Nguyen PA, … <strong>Huang CW</strong>, Yang HC, … Hsu JC.',j:'Journal of Global Health 15:04236',k:['ai','epi']},
+ {y:2025,t:'Enhancing chronic diabetes care with companion robots in rural Taiwan',a:'Lin YT, Chiu HL, Shao JW, Yang HC, <strong>Huang CW</strong>*.',j:'Studies in Health Technology and Informatics 329:1084–1088 (MEDINFO 2025)',k:['dh'],r:'c'},
+ {y:2025,t:'Personalized prediction of chronic kidney disease progression in patients with CKD stages 3–5: a multicenter study using the machine learning approach',a:'Duong TT, Nguyen MT, Liao CT, Le NH, Phan TP, <strong>Huang CW</strong>, Hsu JC, Nguyen APA.',j:'Studies in Health Technology and Informatics 329:1165–1169 (MEDINFO 2025)',k:['ai']},
+ {y:2025,t:'Real-world data on the associations of tricyclic antidepressants and selective serotonin reuptake inhibitors with gynecologic cancer risk',a:'Wang CH†, <strong>Huang CW</strong>†, Nguyen NTH, Lin MC, Nguyen PA, Islam MM, Chien SC, Yang HC.',j:'Cancers',k:['epi'],r:'f'},
+ {y:2025,t:'The protective role of anti-Parkinsonian drugs in pancreatic cancer risk: a comprehensive case-control study in Taiwan',a:'Yang HC, Chou WC, Nguyen PA, Nguyen NTH, Nguyen TP, Wang CH, Hsu JC, Lin MC, <strong>Huang CW</strong>*.',j:'Cancer Science',k:['epi'],r:'c'},
+ {y:2025,t:'Validating nonverbal cues for assessing physician empathy in telemedicine: a Delphi study',a:'Rahmanti AR, Yang HC, <strong>Huang CW</strong>, Huang CT, Lazuardi L, Lin CW, Li YJ.',j:'Medical Education Online',k:['dh']},
+ {y:2024,t:'Early detection of dementia in type 2 diabetes population: predictive analytics using machine learning approach',a:'Phuc TP, Nguyen PA, Nguyen NN, … <strong>Huang CW</strong>, Yang HC, … Hsu JC.',j:'Journal of Medical Internet Research',k:['ai']},
+ {y:2024,t:'Comprehensive evaluation of the cardiovascular protective effects of SGLT2 inhibitors in patients with advanced chronic kidney disease: a real-world evidence',a:'Shiao CC, Chiu CW, Chang YM, … <strong>Huang CW</strong>, … Hsu JC.',j:'American Journal of Nephrology',k:['epi']},
+ {y:2024,t:'Evaluating the effectiveness of a novel personalized health education approach for hemodialysis patients: a four-week study using a widely-used communication app in Taiwan',a:'Lin YT, Zheng CM, Hung KC, Yang HC, Zheng ML, <strong>Huang CW</strong>*.',j:'Studies in Health Technology and Informatics (MIE 2024)',k:['dh'],r:'c'},
+ {y:2024,t:'利用爬蟲建立慢性腎病衛教資料庫的成效評估',a:'林郁庭、鄭彩梅、洪國欽、鄭美玲、<strong>黃芝瑋</strong>*',j:'醫療資訊雜誌 33(3):31–41',k:['dh'],r:'c'},
+ {y:2024,t:'Taipei Medical University Clinical Research Database: a collaborative hospital EHR database aligned with international common data standards',a:'Nguyen PA, Hsu MH, Chang TH, Yang HC, <strong>Huang CW</strong>, Liao CT, Lu CY, Hsu JC.',j:'BMJ Health & Care Informatics 31(1):e100890',k:['ai']},
+ {y:2024,t:'Personalised prediction of maintenance dialysis initiation in patients with chronic kidney disease stages 3–5: a multicentre study using the machine learning approach',a:'Hoang AT, Nguyen PA, Phan TP, … <strong>Huang CW</strong>, Iqbal U, … Liao CT.',j:'BMJ Health & Care Informatics 31(1):e100893',k:['ai']},
+ {y:2024,t:'The effect of social robots on depression and loneliness for older residents in long-term care facilities: a meta-analysis of randomized controlled trials',a:'Yen HY, <strong>Huang CW</strong>, Chiu HL, Jin G.',j:'Journal of the American Medical Directors Association',k:['dh','rev']},
+ {y:2024,t:'A novel Multi-Level Refined (MLR) knowledge graph design and chatbot system for healthcare applications',a:'Hsueh HC, Chien SC, <strong>Huang CW</strong>, Yang HC, Iqbal U, Lin LF, Jian WS.',j:'PLoS One 19(1):e0296939',k:['ai']},
+ {y:2024,t:'Unveiling the future of COVID-19 patient care: groundbreaking prediction models for severe outcomes or mortality in hospitalized cases',a:'Hien NTK, Tsai FJ, Chang YH, … <strong>Huang CW</strong>, Yang HC, Hsu JC.',j:'Frontiers in Medicine 10:1289968',k:['ai']},
+ {y:2024,t:'Speech emotion recognition applied to real-world medical consultation',a:'Huang CT, <strong>Huang CW</strong>, Yang HC, Li YJ.',j:'Studies in Health Technology and Informatics 310:1121–1125',k:['ai']},
+ {y:2024,t:'Facial mimicry and doctor-patient satisfaction: the feasibility of artificial empathy in a clinical video data',a:'Rahmanti AR, <strong>Huang CW</strong>, Muhtar MS, Yang HC, Li YJ.',j:'Studies in Health Technology and Informatics 310:1116–1120',k:['ai']},
+ {y:2023,t:'Social companion robots for alleviating depression and loneliness in institutional older adults',a:'Yen HY, <strong>Huang CW</strong>, Chiu HL, Jin G.',j:'Psychiatry Research 328:115425',k:['dh']},
+ {y:2023,t:'Emotion recognition in doctor-patient interactions from real-world clinical video database: initial development of artificial empathy',a:'<strong>Huang CW</strong>, Wu BCY, Nguyen PA, Wang HH, Kao CC, Lee PC, Rahmanti AR, Hsu JC, Yang HC, Li YJ.',j:'Computer Methods and Programs in Biomedicine 233:107480',k:['ai'],r:'f'},
+ {y:2023,t:'Crowdsource authoring as a tool for enhancing the quality of competency assessments in healthcare professions',a:'Lin CW, Clinciu DL, Salcedo D, <strong>Huang CW</strong>, Kang EYN, Li YJ.',j:'PLoS One',k:['dh']},
+ {y:2023,t:'Renin-angiotensin-aldosterone system inhibitors and development of gynecologic cancers: a 23 million individual population-based study',a:'Nguyen NTH, Nguyen PA, <strong>Huang CW</strong>, … Yang HC.',j:'International Journal of Molecular Sciences 24(4):3814',k:['epi']},
+ {y:2022,t:'Association between proton pump inhibitor use and the risk of female cancers: a nested case-control study of 23 million individuals',a:'Nguyen NTH, <strong>Huang CW</strong>, Wang CH, … Yang HC.',j:'Cancers 14(24):6083',k:['epi']},
+ {y:2022,t:'Proton pump inhibitor use and risk of gastric cancer: current evidence from epidemiological studies and critical appraisal',a:'Poly TN, Lin MC, Syed-Abdul S, <strong>Huang CW</strong>, Yang HC, Li YJ.',j:'Cancers 14(13):3052',k:['epi','rev']},
+ {y:2022,t:'Using artificial intelligence for the early detection of micro-progression of pressure injuries in hospitalized patients: a preliminary nursing perspective evaluation',a:'Wu SC, Li YJ, Chen HL, Ku ML, Yu YC, Nguyen PA, <strong>Huang CW</strong>.',j:'Studies in Health Technology and Informatics 290:1016–1017',k:['ai']},
+ {y:2022,t:'mHealth research for weight loss, physical activity, and sedentary behavior: a bibliometric analysis',a:'Wu CC, Islam MM, <strong>Huang CW</strong>, Wang YC, Kung WM, Weng YC, Su CH.',j:'Journal of Medical Internet Research 24(5):e35747',k:['dh','rev']},
+ {y:2022,t:'A consistency model for identifying the effects of n-3 and n-6 fatty acids on lipoproteins in dialysis patients',a:'Chang KY, Chen YC, Yeh SC, Kao CC, Cheng CY, Kang YN, <strong>Huang CW</strong>*.',j:'Nutrients 14(6):1250',k:['rev'],r:'c'},
+ {y:2022,t:'How can research on artificial empathy be enhanced by applying deepfakes?',a:'Yang HC, Rahmanti AR, <strong>Huang CW</strong>*, Li YC*.',j:'Journal of Medical Internet Research 24(3):e29506',k:['ai'],r:'c'},
+ {y:2022,t:'Chemopreventive effects of concomitant or individual use of statins, aspirin, metformin, and angiotensin drugs: a study using claims data of 23 million individuals',a:'Wang CH, <strong>Huang CW</strong>†, Nguyen PA†, Lin MC, Yeh CY, Islam MM, Rahmanti AR, Yang HC.',j:'Cancers 14(5):1211',k:['epi'],r:'f'},
+ {y:2021,t:'Predicting hepatocellular carcinoma with minimal features from electronic health records: development of a deep learning model',a:'Liang CW, Yang HC, Islam MM, Nguyen PA, Feng YT, Hou ZY, <strong>Huang CW</strong>, Poly TN, Li YC.',j:'JMIR Cancer 7(4):e19812',k:['ai']},
+ {y:2021,t:'Improved diagnosis-medication association mining to reduce pseudo-associations',a:'Wang CH, Nguyen PA, Li YCJ, Islam MM, Poly TN, Tran QV, <strong>Huang CW</strong>, Yang HC.',j:'Computer Methods and Programs in Biomedicine 207',k:['epi']},
+ {y:2021,t:'Development of a web-based system for exploring cancer risk with long-term use of drugs: logistic regression approach',a:'Yang HC, Islam MM, Nguyen PA, Wang CH, Poly TN, <strong>Huang CW</strong>, Li YCJ.',j:'JMIR Public Health and Surveillance 7(2):e21401',k:['epi']},
+ {y:2020,t:'An innovative scoring system for predicting major adverse cardiac events in patients with chest pain based on machine learning',a:'Wu CC, Hsu WD, Wang YC, Kung WM, Tzeng IS, <strong>Huang CW</strong>, Huang CY, Li YC.',j:'IEEE Access 8:124076–124083',k:['ai']},
+ {y:2020,t:'Statins use and its impact in EGFR-TKIs resistance to prolong the survival of lung cancer patients: a cancer registry cohort study in Taiwan',a:'Nguyen PA, Chang CC, Galvin CJ, Wang YC, An SY, <strong>Huang CW</strong>, Wang YH, Hsu MH, Li YCJ, Yang HC.',j:'Cancer Science',k:['epi']},
+ {y:2020,t:'Meta-analysis of proton pump inhibitors induced risk of community-acquired pneumonia',a:'Nguyen PA, Islam M, Galvin CJ, Chang CC, An SY, Yang HC, <strong>Huang CW</strong>, Li YC, Iqbal U.',j:'International Journal for Quality in Health Care 32(5):292–299',k:['epi','rev']},
+ {y:2019,t:'Scaling up knowledge sharing to speed up quality improvement in healthcare organizations',a:'<strong>Huang CW</strong>, Chin YP, Li YC.',j:'International Journal for Quality in Health Care 31(9):655–656',k:['dh'],r:'f'},
+ {y:2019,t:'Opportunities and challenges in Taiwan for implementing the learning health system',a:'Wu CY, <strong>Huang CW</strong>, Yang HC, Li YC.',j:'International Journal for Quality in Health Care',k:['dh']},
+ {y:2018,t:'Learning from errors for continuously improving patient safety',a:'<strong>Huang CW</strong>, Iqbal U, Li YC.',j:'',k:['dh'],r:'f'}];
+var cats=[{id:'all',zh:'全部',en:'All'},{id:'lead',zh:'第一／通訊作者',en:'First / corresponding'},{id:'ai',zh:'臨床 AI',en:'Clinical AI'},{id:'dh',zh:'數位健康',en:'Digital health'},{id:'epi',zh:'藥物流病',en:'Pharmacoepi'},{id:'rev',zh:'統合分析與回顧',en:'Reviews'}];
 var tagName={ai:'Clinical AI',dh:'Digital health',epi:'Pharmacoepidemiology',rev:'Review / meta-analysis'};
-var pl=document.getElementById('pubList'),pc=document.getElementById('pubChips');
-pubs.forEach(function(p){var d=document.createElement('div');d.className='item';d.dataset.k=p.k.join(' ');
- d.innerHTML='<div class="ico alt" style="font-family:var(--f-mono);font-weight:500">'+p.y+'</div><div><div class="pub-t">'+p.t+'</div><div class="t3">'+p.a+'</div><div class="t3"><i>'+p.j+'</i></div><div class="tags">'+p.k.map(function(k){return '<span>'+tagName[k]+'</span>';}).join('')+'</div></div>';pl.appendChild(d);});
+var roleName={f:['第一作者','First author'],c:['通訊作者','Corresponding']};
+var pl=document.getElementById('pubList'),pc=document.getElementById('pubChips'),pubCat='all',pubAll=false;
+pubs.forEach(function(p){var d=document.createElement('div');d.className='item';d.dataset.k=p.k.join(' ')+(p.r?' lead':'');
+ d.innerHTML='<div class="ico alt" style="font-family:var(--f-mono);font-weight:500">'+p.y+'</div><div><div class="pub-t">'+p.t+'</div><div class="t3">'+p.a+'</div>'+(p.j?'<div class="t3"><i>'+p.j+'</i></div>':'')+'<div class="tags">'+(p.r?'<span class="lead-tag">'+bi(roleName[p.r][0],roleName[p.r][1])+'</span>':'')+p.k.map(function(k){return '<span>'+tagName[k]+'</span>';}).join('')+'</div></div>';pl.appendChild(d);});
+function pubRender(){var n=0,shown=0;pl.querySelectorAll('.item').forEach(function(it){var ok=pubCat==='all'||it.dataset.k.split(' ').indexOf(pubCat)>=0;if(ok)n++;var vis=ok&&(pubAll||n<=8);it.classList.toggle('out',!vis);if(vis)shown++;});
+ var m=document.getElementById('pubMore');m.hidden=n<=8;m.innerHTML=pubAll?bi('收合','Show fewer'):bi('顯示全部 '+n+' 篇','Show all '+n);
+ document.getElementById('pubCount').textContent=n;}
 cats.forEach(function(c,i){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('aria-pressed',String(i===0));b.innerHTML=bi(c.zh,c.en);
- b.onclick=function(){pc.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');
-  pl.querySelectorAll('.item').forEach(function(it){it.classList.toggle('out',c.id!=='all'&&it.dataset.k.split(' ').indexOf(c.id)<0);});};pc.appendChild(b);});
+ b.onclick=function(){pc.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');pubCat=c.id;pubAll=false;pubRender();};pc.appendChild(b);});
+document.getElementById('pubMore').onclick=function(){pubAll=!pubAll;pubRender();};
+pubRender();
+
+/* tabs: grants + lab */
+function tabs(group,attr,prefix){var g=document.getElementById(group);g.querySelectorAll('.chip').forEach(function(btn){btn.onclick=function(){g.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',String(x===btn));document.getElementById(prefix+x.dataset[attr]).hidden=x!==btn;});};});}
+tabs('grantTabs','g','g-');tabs('labTabs','t','t-');
 
 /* skills */
 var skills=[{zh:'醫療人工智慧',en:'Medical AI',czh:'預測模型、LLM 評估',cen:'Prediction models, LLM evaluation'},
