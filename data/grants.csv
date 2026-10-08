@@ -1,0 +1,33 @@
+show,role,period,title_zh,title_en,funder_zh,funder_en,badge,active
+Y,PI,2026/04 – 2026/12,基於臨床真實世界資料之兒童成長發展模型建構與牙科特徵增益分析研究,Child growth and development modeling from real-world clinical data with dental feature analysis,產學合作,Industry-academia,IND,Y
+Y,PI,2026/03 – 2026/08,超音波導引血管進入及神經阻斷訓練模組開發之前導研究,Pilot study of an ultrasound-guided vascular access and nerve block training module,產學合作,Industry-academia,IND,Y
+Y,PI,2025/09 – 2026/02,臨床數據驅動之乳癌風險預測與決策支援工具開發,Breast cancer risk prediction and decision support from clinical data,產學合作,Industry-academia,IND,
+Y,PI,2025/08 – 2027/07,運用生成式人工智慧於慢性腎臟病衛教之能力、臨床效能與成本效益評估,"Capabilities, clinical effectiveness, and cost-effectiveness of generative AI for CKD patient education",國科會專題研究計畫,NSTC research grant,NSTC,Y
+Y,PI,2025/06 – 2027/05,以活動為基礎之壓傷預測智慧鏡頭與臨床驗證應用計畫,Activity-based smart camera for pressure injury prediction and clinical validation,國科會產學合作計畫,NSTC industry-academia grant,NSTC,Y
+Y,PI,2025/02 – 2025/08,臨床不良事件醫學模擬影像收案與分析,Simulation video collection and analysis of clinical adverse events,產學合作,Industry-academia,IND,
+Y,PI,2025/01 – 2025/07,智慧床墊醫學模擬收案與分析,Smart mattress validation in medical simulation,產學合作,Industry-academia,IND,
+Y,PI,2024/08 – 2025/07,性別差異對數位健康介入效果的影響：慢性腎臟病患者的預後評估,Gender differences in the effectiveness of digital health interventions for CKD,國科會性別與科技研究計畫,NSTC gender and technology grant,NSTC,
+Y,PI,2023/08 – 2025/07,利用臨床表型與穿戴式生理量測資料建立多模態透析病人個人化骨鬆骨折風險預測模型,Multimodal personalized fracture-risk prediction for dialysis patients using clinical and wearable data,國科會專題研究計畫（兩年）,NSTC research grant (2 years),NSTC,
+Y,PI,2023/05 – 2024/04,營養不良－發炎複合症分數（MICS）對不同副甲狀腺素初次透析患者骨折的影響：多中心數據庫研究,Malnutrition-inflammation score and fracture risk in incident dialysis patients: a multicenter database study,雙和醫院特色研究計畫,Shuang Ho Hospital research grant,SH,
+Y,PI,2019/08 – 2021/03,利用電子病歷與個人健康資訊建構慢性腎臟病人之紅血球生成刺激劑智慧給藥模型,Smart ESA dosing model for CKD patients from EHR and personal health data,科技部專題研究計畫（含延續）,MOST research grant (with extension),MOST,
+Y,PI,2018/08 – 2020/07,新聘教師研究補助,New faculty research grant,臺北醫學大學,Taipei Medical University,TMU,
+Y,Co-PI,2024/02 – 2027/01,數位健康新創轉譯產學聯盟（1/3 至 3/3）,DHT Digital Health Alliance (years 1–3),國科會產學技術聯盟,NSTC,,
+Y,Co-PI,2025/12 – 2026/12,建構白沙屯媽祖繞境行動醫療照護系統之研究,Mobile emergency care system for the Baishatun Mazu pilgrimage,衛生福利部,MOHW,,
+Y,Co-PI,2025/08 – 2026/07,結合機器學習和前瞻性臨床研究的腫瘤腎病學新方法,Machine learning and prospective research in onco-nephrology,國科會,NSTC,,
+Y,Co-PI,2025/08 – 2026/07,虛擬 OSCE 考官：賦能學生，助力教師,Virtual OSCE examiner,國科會,NSTC,,
+Y,Co-PI,2025/08 – 2026/07,模擬教案圖書館：人機協作之醫學模擬教案智能生成平台,AI-assisted medical simulation scenario library,國科會,NSTC,,
+Y,Co-PI,2025/08 – 2026/07,護理紀錄生成摘要內容之正確性與臨床實用性評估,Accuracy and usefulness of AI-generated nursing record summaries,雙和醫院,Shuang Ho Hospital,,
+Y,Co-PI,2025/08 – 2026/07,以數位健康轉譯為核心之女性 STEM 跨域育成計畫,Women in STEM through digital health translation,教育部,Ministry of Education,,
+Y,Co-PI,2025/01 – 2026/04,臨床深度推論之醫療專用大型語言模型開發及商業化服務計畫,Clinical-reasoning medical LLM development and commercialization,經濟部學界科專,Ministry of Economic Affairs,,
+Y,Co-PI,2024/08 – 2026/07,以針對性風險降低策略為年輕世代提供個性化之健康賦權,Personalized health empowerment for young people,國科會,NSTC,,
+Y,Co-PI,2024/07 – 2026/06,開發 ICU 腦損傷病人意識監測及預後決策支援系統,ICU consciousness monitoring and prognosis support for brain injury,國科會,NSTC,,
+Y,Co-PI,2024/05 – 2027/04,透過基於人工智慧的健康風險評估以鼓勵青少年之行為改變,AI-based health risk evaluation for adolescent behavior change (EU–Taiwan),國科會雙邊國際合作,NSTC bilateral,,
+Y,Co-PI,2023/11 – 2025/04,急性主動脈剝離症候群人工智慧醫療器材軟體：多中心效能驗證,Multicenter validation of an AI tool for acute aortic syndrome,國科會產學合作,NSTC industry-academia,,
+Y,Co-PI,2023/08 – 2026/07,褪黑激素在慢性腎病礦物質與骨骼疾病的新作用機制,Melatonin in CKD mineral and bone disorder,國科會,NSTC,,
+Y,Co-PI,2023/08 – 2025/07,同理心溫度計：場域驗證與導入成效評估研究,Empathy thermometer: field validation and adoption,國科會,NSTC,,
+Y,Co-PI,2023/08 – 2025/07,新冠肺炎重症、死亡、長期併發症的影響因素及個人化預測模型,Personalized prediction of severe COVID-19 outcomes,國科會,NSTC,,
+Y,Co-PI,2022/08 – 2025/07,以人工智慧為本的虛擬考官建置操作技能自學系統：以基本救命術為例,AI virtual examiner for BLS skills self-learning,科技部,MOST,,
+Y,Co-PI,2022/06 – 2024/05,智慧醫療產學聯盟：建立第一個跨國開放式意識監測平台系統,Smart healthcare alliance: open consciousness monitoring platform,科技部,MOST,,
+Y,Co-PI,2021/08 – 2023/07,打造即時「同理心溫度計」協助醫病互動,Real-time empathy thermometer for doctor-patient interaction,科技部,MOST,,
+Y,Co-PI,2020/06 – 2022/05,首創運用深度學習開發長期臥床病人壓瘡變化預測智慧鏡頭,Deep learning smart camera for pressure injury prediction,科技部產學合作,MOST industry-academia,,
+Y,Co-PI,2020/02 – 2021/09,運用資料探勘建立長期用藥與癌症發生之個人化風險矩陣,Personalized risk matrix of long-term medication use and cancer,科技部,MOST,,
